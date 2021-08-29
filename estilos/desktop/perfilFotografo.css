@@ -1,0 +1,12 @@
+#cabecalho{
+    text-align: unset;
+}
+#cabecalhoMenu{
+    font-size: 150%;
+}
+#corpo{
+    flex-wrap: nowrap;
+}
+.icone{
+    width: 30%;
+}

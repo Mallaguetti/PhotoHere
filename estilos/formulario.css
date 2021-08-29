@@ -1,0 +1,29 @@
+table{
+    margin:.6rem auto;
+    text-align:left;
+}
+input{
+    margin:.3rem;
+    padding:.6rem;
+    border-radius:.3rem;
+    border:.1rem solid var(--thrdDark);
+    background-color: var(--secLight);
+    outline:none;
+}
+input:hover{
+    border:.1rem solid var(--sec);
+    box-shadow:.1rem .1rem .3rem var(--secDark);
+    transition:.18s;
+}
+input[type=submit],input[type=reset]:hover{
+    cursor:pointer;
+}
+input:focus{
+    border:.1rem solid var(--sec);
+    box-shadow:.1rem .1rem .3rem var(--secDark);
+    transition:.18s;
+}
+#cabecalhoCapa{
+    border-bottom-right-radius:.3rem;
+    border-bottom-left-radius:.3rem;
+}

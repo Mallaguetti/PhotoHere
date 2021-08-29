@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Pagina</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilos/_main.css">
+    <link rel="stylesheet" type="text/css" href="estilos/menu.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="estilos/desktop/_main.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="">
+    <script>
+        function pgIni(){
+            window.location.href = "index.html";
+        }
+        function pgMen(){
+            window.location.href = "login.html";
+        }
+        function pgHom(){
+            window.location.href = "cadastro.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="tudo">
+        <div id="cabecalho">
+            <div id="cabecalhoLogo">
+                <h1 id="logo" onclick="pgIni()">PhotoHere</h1>
+            </div>
+            <div id="cabecalhoMenu">
+                <div id="cadastrar" class="bt0" onclick="pgHom()">Cadastrar</div>
+                <div id="login" class="bt1" onclick="pgMen()">Login</div>
+            </div>
+        </div>
+        <div id="corpo">
+            <div id="coluna" class="coluna">
+                <div id="caixa1" class="caixa">
+                    <h2>Home do site</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eos possimus? Odit assumenda cumque porro facere, ex nemo officiis quidem officia debitis enim esse natus laudantium, commodi sint et distinctio.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, magni facere quod perspiciatis dolore unde doloremque quas sequi nihil totam architecto harum vero laudantium fuga. Tempora sint repellendus sequi veniam.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique rerum quos excepturi vitae eum, deleniti velit architecto ab impedit necessitatibus perspiciatis quidem nihil minus totam, ducimus aperiam optio! Quisquam, quidem.</p>
+                </div>
+                <div id="caixa2" class="caixa">
+                    <h2>Conteudo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique rerum quos excepturi vitae eum, deleniti velit architecto ab impedit necessitatibus perspiciatis quidem nihil minus totam, ducimus aperiam optio! Quisquam, quidem.</p>
+                </div>
+            </div>
+        </div>
+        <div id="rodape">
+            <h2>Rodape</h2>
+        </div>
+    </div>
+</body>

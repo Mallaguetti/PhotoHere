@@ -1,0 +1,87 @@
+/*Estilos Tudo*/
+:root{
+    /*Cores do site*/
+    --frst:#004483;
+    --secd:#EFA00B;
+    --thrd:#03b0db;
+    --frth:#D8315B;
+    --frstDark:#00000f;
+    --secdDark:#200015;
+    --frstLght:#eeefff;
+    --secdLght:#fffeee;
+}
+body{
+    background-color:var(--frstDark);
+    color:var(--secdDark);
+    font-family:Arial,Helvetica,sans-serif;
+    text-align:justify;
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+#tudo{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:space-between;
+    background-color:var(--frstLght);
+    margin:0 .6rem;
+    padding:0 .6rem;
+    min-height:100vh;
+}
+/*Estilos cabeçalho*/
+#cabecalho{
+    width:100%;
+    background-color:var(--frst);
+    border-bottom-right-radius:.3rem;
+    border-bottom-left-radius:.3rem;
+    margin-bottom:.6rem;
+}
+#cabecalhoLogo{
+    padding:.6rem;
+}
+#logo{
+    background-color:var(--frstLght);
+    color:var(--thrd);
+    border-radius:.3rem;
+    padding:0 .6rem;
+    display:unset;
+    cursor:pointer;
+}
+#logo:hover{
+    box-shadow:.1rem .1rem .3rem var(--secdDark);
+    transition:.2s;
+}
+/*Estilos Corpo*/
+#corpo{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+.coluna{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    background-color:var(--secd);
+    margin-bottom:.6rem;
+    border-radius:.3rem;
+    padding:.6rem .6rem 0;
+}
+.caixa{
+    width: 100%;
+    background-color:var(--secdLght);
+    margin-bottom:.6rem;
+    border-radius:.3rem;
+    padding:.3rem;
+}
+/*Estilos Rodape*/
+#rodape{
+    width:100%;
+    background-color:var(--frst);
+    text-align:center;
+    border-top-right-radius:.3rem;
+    border-top-left-radius:.3rem;
+    padding:.1rem;
+}

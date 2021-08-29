@@ -1,0 +1,30 @@
+#cabecalhoMenu{
+    display: flex;
+    justify-content: flex-end;
+}
+.bt0{
+    background-color: var(--main);
+    color: var(--thrdDark);
+    cursor: pointer;
+    margin-right: 1%;
+    padding: 0.8% 2% 0.6% 2%;
+    border-top-right-radius:0.3rem;
+    border-top-left-radius:0.3rem;
+}
+.bt0:hover{
+    color: var(--thrd);
+    transition: 180ms;
+}
+.bt1{
+    background-color: var(--mainLight);
+    color: var(--thrdDark);
+    cursor: pointer;
+    margin-right: 3%;
+    padding: 0.8% 2% 0.6% 2%;
+    border-top-right-radius:0.3rem;
+    border-top-left-radius:0.3rem;
+}
+.bt1:hover{
+    color: var(--thrd);
+    transition: 180ms;
+}
