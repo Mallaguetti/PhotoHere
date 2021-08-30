@@ -1,4 +1,5 @@
 /*Estilos Tudo*/
+@charset "UTF-8";
 :root{
     /*Cores do site*/
     --frst:#004483;
@@ -8,17 +9,23 @@
     --dark:#1f0016;
     --lght:#ffffff;
 }
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
-    background-color:var(--lght);
+    width: 100%;
+    background-image: linear-gradient(180deg, var(--frst)20%, var(--thrd));
     color:var(--dark);
-    font-family:Arial,Helvetica,sans-serif;
     text-align:justify;
     margin: 0;
+}
+p{
+    text-align: justify;
 }
 img {
     width: 100%;
 }
-#tudo{
+main{
     display:flex;
     flex-wrap:wrap;
     align-content:space-between;
@@ -26,17 +33,17 @@ img {
     min-height:100vh;
 }
 /*Estilos cabeçalho*/
-#cabecalho{
+.cabecalho{
     width:100%;
     background-color:var(--frst);
     border-bottom-right-radius:.3rem;
     border-bottom-left-radius:.3rem;
     margin-bottom:.6rem;
 }
-#cabecalhoLogo{
+.cabecalhoLogo{
     padding:.6rem;
 }
-#logo{
+.logo{
     background-color:var(--lght);
     color:var(--thrd);
     border-radius:.3rem;
@@ -44,12 +51,12 @@ img {
     display:unset;
     cursor:pointer;
 }
-#logo:hover{
+.logo:hover{
     box-shadow:.1rem .1rem .3rem var(--dark);
     transition:.2s;
 }
 /*Estilos Corpo*/
-#corpo{
+.corpo{
     width: 100%;
     display:flex;
     justify-content: center;
@@ -74,7 +81,7 @@ img {
     padding:.3rem;
 }
 /*Estilos Rodape*/
-#rodape{
+.rodape{
     width:100%;
     background-color:var(--frst);
     text-align:center;

@@ -1,8 +1,8 @@
-#cabecalhoMenu{
+.cabecalhoMenu{
     display: flex;
     justify-content: flex-end;
 }
-.bt0{
+.bt{
     background-color: var(--main);
     color: var(--dark);
     cursor: pointer;
@@ -11,11 +11,11 @@
     border-top-right-radius:0.3rem;
     border-top-left-radius:0.3rem;
 }
-.bt0:hover{
+.bt:hover{
     color: var(--thrd);
     transition: 180ms;
 }
-.bt1{
+.bt-selec{
     background-color: var(--light);
     color: var(--dark);
     cursor: pointer;
@@ -24,7 +24,7 @@
     border-top-right-radius:0.3rem;
     border-top-left-radius:0.3rem;
 }
-.bt1:hover{
+.bt-selec:hover{
     color: var(--thrd);
     transition: 180ms;
 }
