@@ -1,0 +1,18 @@
+a {
+    color: var(--frth);
+    text-decoration: none;
+}
+a:visited{
+    color: var(--frth);
+}
+
+a:hover{
+    color: var(--thrd);
+    text-decoration: underline;
+}
+a:active{
+    color: var(--secd);
+}
+a::after{
+    content: ' oi';
+}

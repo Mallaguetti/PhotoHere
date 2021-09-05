@@ -1,30 +1,30 @@
-.cabecalhoMenu{
-    display: flex;
-    justify-content: flex-end;
+nav{
+    display:flex;
+    justify-content:flex-end;
 }
 .bt{
-    background-color: var(--main);
-    color: var(--dark);
-    cursor: pointer;
-    margin-right: 1%;
-    padding: 0.8% 2% 0.6% 2%;
+    background-color:var(--cor3);
+    color:var(--claro);
+    cursor:pointer;
+    margin-right:1%;
+    padding:0.8% 2%;
     border-top-right-radius:0.3rem;
     border-top-left-radius:0.3rem;
 }
 .bt:hover{
-    color: var(--thrd);
-    transition: 180ms;
+    color:var(--cor4);
+    transition:200ms;
 }
-.bt-selec{
-    background-color: var(--light);
-    color: var(--dark);
-    cursor: pointer;
-    margin-right: 3%;
-    padding: 0.8% 2% 0.6% 2%;
-    border-top-right-radius:0.3rem;
-    border-top-left-radius:0.3rem;
+.selecionado{
+    background-color: unset;
 }
-.bt-selec:hover{
-    color: var(--thrd);
-    transition: 180ms;
+#cadastrar{
+    border-radius:.3rem;
+    background-color:var(--cor5);
+    margin-bottom:20px;
+}
+#login{
+    background-color:unset;
+    box-shadow:unset;
+    margin-bottom:20px;
 }
