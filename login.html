@@ -1,52 +1,41 @@
 <!DOCTYPE html>
-<head>
+<head lang="pt-br">
     <title>Pagina</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="estilos/_main.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="estilos/desktop/_main.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="">
-    <script>
-        function pgIni(){
-            window.location.href = "index.html";
-        }
-    </script>
+    <!--<link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="estilos/desktop/indexD.css">-->
 </head>
 <body>
-    <div id="tudo">
-        <div id="cabecalho">
-            <div id="cabecalhoLogo">
-                <h1 id="logo" onclick="pgIni()">PhotoHere</h1>
+    <header>
+        <a href="index.html">
+            <div class="bt"id="logo">
+                <h1>PhotoHere</h1>
             </div>
-        </div>
-        <div id="corpo">
-            <div id="coluna" class="coluna">
-                <div id="caixa" class="caixa">
-                    <H2>Login</H2>
-                    <form method="post" name="formLogin" action="scripts/salvarBD.php" enctype="multipart/form-data">
-                        <table>
-                            <tr>
-                                <th> Usuário: </th>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="txtNome" size="40" required=""></td>
-                            </tr>
-                            <tr>
-                                <th> Senha: </th>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="txtNome" size="40" required=""></td>
-                            </tr>     
-                            <tr>
-                                <td><input type="submit" name="btnEnviar" value="Enviar"><input type="reset" name="btnLimpar" value="Limpar"></td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div> 
-        </div>
-        <div id="rodape">
-            <h2>Rodape</h2>
-        </div>
-    </div>
+        </a>
+    </header>
+    <main>
+        <section class="flex">
+            <form method="post" name="formLogin" action="scripts/salvarBD.php" enctype="multipart/form-data">
+                <H2>Login</H2>
+                <table>
+                    <tr>
+                        <th> Usuário: </th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="txtNome" size="40" required=""></td>
+                    </tr>
+                    <tr>
+                        <th> Senha: </th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="txtNome" size="40" required=""></td>
+                    </tr>     
+                    <tr>
+                        <td><input type="submit" name="btnEnviar" value="Enviar"><input type="reset" name="btnLimpar" value="Limpar"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
 </body>

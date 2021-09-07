@@ -1,3 +1,12 @@
+body{
+    background-color: var(--claro);
+}
+form{
+    background-color: var(--cor2);
+    padding:.6rem;
+    border-radius:.3rem;
+    box-shadow: #00000066 .1rem .1rem .3rem;
+}
 table{
     margin:.6rem auto;
     text-align:left;
@@ -6,21 +15,21 @@ input{
     margin:.3rem;
     padding:.6rem;
     border-radius:.3rem;
-    border:.1rem solid var(--thrdDark);
-    background-color: var(--secLight);
+    border:.1rem solid var(--escuro);
+    background-color: var(--claro);
+    box-shadow:#00000066 .1rem .1rem .3rem;
     outline:none;
 }
 input:hover{
-    border:.1rem solid var(--sec);
-    box-shadow:.1rem .1rem .3rem var(--secDark);
-    transition:.18s;
+    border:.1rem solid var(--cor2);
+    transition:.2s;
 }
 input[type=submit],input[type=reset]:hover{
     cursor:pointer;
 }
 input:focus{
-    border:.1rem solid var(--sec);
-    box-shadow:.1rem .1rem .3rem var(--secDark);
+    border:.1rem solid var(--cor2);
+    box-shadow:.1rem .1rem .3rem var(--escuro);
     transition:.18s;
 }
 #cabecalhoCapa{
