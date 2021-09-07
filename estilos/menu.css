@@ -1,13 +1,15 @@
 nav{
     display:flex;
+    align-items: center ;
     justify-content:flex-end;
 }
 .bt{
+    text-align:center;
     background-color:var(--cor3);
     color:var(--claro);
     cursor:pointer;
     margin-right:1%;
-    padding:0.8% 2%;
+    padding:10px 15px;
     border-top-right-radius:0.3rem;
     border-top-left-radius:0.3rem;
 }
@@ -16,15 +18,13 @@ nav{
     transition:200ms;
 }
 .selecionado{
-    background-color: unset;
+    background-color:unset;
 }
 #cadastrar{
     border-radius:.3rem;
     background-color:var(--cor5);
-    margin-bottom:20px;
 }
 #login{
     background-color:unset;
     box-shadow:unset;
-    margin-bottom:20px;
 }

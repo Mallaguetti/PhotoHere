@@ -1,4 +1,11 @@
+body{
+    background-image:url(../img/camera.jpg);
+    background-size:auto max(100vh, 75vw);
+    background-position:center 0;
+    background-repeat:no-repeat;
+}
 #fotografo{
     visibility: hidden;
     position: absolute;
 }
+

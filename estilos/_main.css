@@ -14,49 +14,39 @@
     padding: 0;
 }
 body{
-    margin: auto;
     background-color:var(--claro);
     color:var(--escuro);
     text-align:justify;
 }
 header {
-    position: fixed;
-    width: 100vw;
-    min-height: 70px;
-    height: 15vh;
-    background-image: linear-gradient(to bottom, var(--cor2) 50%, var(--cor1) 150%);
-    box-shadow: #00000060 0 3px 7px;
+    position:fixed;
+    width:100vw;
+    padding-top:2vh;
 }
 main{
-    margin: auto;
-    min-height: 90vh;
-    min-width: 260px;
-    max-width: 1000px;
-    
-    justify-content: center;
-    align-items:flex-start;
+    min-height:90vh;
+    min-width:260px;
 }
 footer{
-    background-color:var(--cor3);
-    text-align:center;
-    height: 10vh;
+    min-height:10vh;
 }
 section{
-    height: 100vh;
-    padding:0 .3rem;
-    display: flex;
-    height: calc();
-    align-items: flex-end;
+    height:100vh;
+    width:86%;
+    max-width:1000px;
+    display:flex;
+    align-items:center;
+    padding:0 max(7%, calc(50% - 500px));
 }
 p{
     text-align:justify;
+    margin:15px 0px;
 }
 .tudo{
     max-width:1200px;
     height:100%;
     margin:auto;
     display:flex;
-    flex-wrap:wrap;
     align-content:space-between;
 }
 .tudo > *{
@@ -70,12 +60,11 @@ p{
     margin:auto 0 0;
 }
 .logo{
-    margin-top:5px;
     width: unset;
 }
 #logo{
     border-radius:.3rem;
     background-color:var(--cor5);
-    padding:0 5px;
+    padding:2px 7px;
 }
 
