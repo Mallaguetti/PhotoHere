@@ -1,9 +1,11 @@
 @charset "UTF-8";
 :root{
-    --cor1:#FF9429;
-    --cor2:#ffca95;
-    --cor3:#CCA175;
+    --cor1:#ff9022;
+    --cor2:#ffcfa0;
+    --cor3:#b9844f;
     --cor4:#ffc400;
+    --cor5:#314e8b;
+    --cor5t:#314e8b80;
     --escuro:#000316;
     --claro:#f1fdff;
 }
@@ -12,14 +14,15 @@
     margin:0;
     padding:0;
     text-decoration:none;
-    text-align:justify;
 }
 body{
     background-color:var(--claro);
     color:var(--escuro);
+    text-align:justify;
 }
 header{
     position:fixed;
+    background-color: var(--cor5t);
     width:94%;
     max-width:1100px;
     padding:2vh max(3%, calc(50% - 550px));  
@@ -32,6 +35,7 @@ main{
     min-width:260px;
 }
 footer{
+    background-color: var(--cor5);
     min-height:10vh;
 }
 nav{
@@ -69,10 +73,10 @@ section{
     align-content: space-around;
 }
 .topo{
-    
+    align-items: flex-start;
 }
 .base{
-    
+    align-items: flex-end;
 }
 
 

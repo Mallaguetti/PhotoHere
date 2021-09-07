@@ -16,3 +16,13 @@ nav a{
     background-color:unset;
     box-shadow:unset;
 }
+#s2{
+    background-color: var(--claro);
+    text-align: center;
+}
+#s2 div{
+    margin: auto;
+}
+#fotografo{
+    height: 85%;
+}
