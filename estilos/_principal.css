@@ -24,6 +24,7 @@ header{
     position:fixed;
     background-color: var(--cor5t);
     width:94%;
+    height: 10vh;
     max-width:1100px;
     padding:2vh max(3%, calc(50% - 550px));  
     display:flex;
@@ -48,6 +49,9 @@ section{
     max-width:1000px;
     min-height:100vh;
     padding:0 max(7%,calc(50% - 500px));
+}
+#s1{
+    padding-top: 12vh;
 }
 #logo{
     border-radius:.3rem;
