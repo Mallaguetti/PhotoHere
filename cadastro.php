@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head lang="pt-br">
     <title>Pagina</title>
@@ -56,7 +57,13 @@
                     </tr>
                     <tr>
                         <td><input type="text" name="senha2" size="40" required=""></td>
-                    </tr>   
+                    </tr> 
+                        <?php
+                            if(isset($_GET["msg"])){
+                                $test=$_GET["msg"];
+                                echo "<tr><td>$test</td></tr>";
+                            };
+                        ?>
                     <tr>
                         <td><input type="submit" name="btnEnviar" value="Enviar"><input type="reset" name="btnLimpar" value="Limpar"></td>
                     </tr>

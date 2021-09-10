@@ -8,17 +8,17 @@
     $senha2 = $_POST["senha2"];
 
     include_once"conect.php";
+    include_once"usuarioDAO.php";
 
     if ($senha1==$senha2){
         if ($usuarioTipo==1) {
-            $sql = "INSERT INTO cliente(nome, sobreNome, usuario, senha, email) VALUES('$nome', '$sobreNome', '$usuario', '$senha1', '$email')";
-            mysqli_query($conexao, $sql);
+            inserirCliente($conexao, $nome, $sobreNome, $usuario, $senha1, $email);
         };
         if ($usuarioTipo==2) {
-            $sql = "INSERT INTO fotografo(nome, sobreNome, usuario, senha, email) VALUES('$nome', '$sobreNome', '$usuario', '$senha1', '$email')";
-            mysqli_query($conexao, $sql);
+            inserirFotografo($conexao, $nome, $sobreNome, $usuario, $senha1, $email);
         };
+        header("Location:../cadastro.php?msg=Cadastrado com sucesso");
     } else {
-        echo "senhas não corespondem";
+        header("Location:../cadastro.php?msg=Senhas não correspondem");
     };
 ?>
