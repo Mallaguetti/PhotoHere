@@ -25,3 +25,15 @@ CREATE TABLE `fotografo` (
   `email` varchar(45) NOT NULL,
   PRIMARY KEY(idFotografo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `Ensaio` (
+  `idEnsaio` int(11) NOT NULL AUTO_INCREMENT,
+  `data` date NOT NULL,
+  `etapa` int(11) NOT NULL,
+  `avaliacao`int(11),
+  `cliente` int(11),
+  `fotografo` int(11),
+  PRIMARY KEY(idEnsaio),
+  FOREIGN KEY(cliente) REFERENCES cliente(idCliente),
+  FOREIGN KEY(fotografo) REFERENCES fotografo(idFotografo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
