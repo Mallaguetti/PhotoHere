@@ -8,7 +8,7 @@
     $senha2 = $_POST["senha2"];
 
     include_once"conect.php";
-    include_once"usuarioDAO.php";
+    include_once"daoUsuario.php";
 
     if ($senha1==$senha2){
         if ($usuarioTipo==1) {
@@ -17,8 +17,8 @@
         if ($usuarioTipo==2) {
             inserirFotografo($conexao, $nome, $sobreNome, $usuario, $senha1, $email);
         };
-        header("Location:../cadastro.php?msg=Cadastrado com sucesso");
+        header("Location:../formUsuario.php?msg=Cadastrado com sucesso");
     } else {
-        header("Location:../cadastro.php?msg=Senhas não correspondem");
+        header("Location:../formUsuario.php?msg=Senhas não correspondem");
     };
 ?>

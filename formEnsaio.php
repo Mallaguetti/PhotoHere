@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <head lang="pt-br">
-    <title>Pagina</title>
+    <title>Marcar Ensaio</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="#">
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <div class="bt"id="logo">
-                <h1>PhotoHere</h1>
-            </div>
-        </a>
+        <nav><a class="bt"id="logo"href="index.html">PhotoHere</a></nav>
     </header>
     <main>
-        <section id="s1">
-            <form method="post" name="formEnsaio" action="scripts/salvarBD.php" enctype="multipart/form-data">
+        <section class="flex" id="s1">
+            <form method="post" name="formEnsaio" action="codigos/salvarEnsaio.php" enctype="multipart/form-data">
                 <H2>Criar Ensaio</H2>
                 <table>
                     <tr>

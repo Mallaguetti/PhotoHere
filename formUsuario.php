@@ -1,16 +1,14 @@
-
 <!DOCTYPE html>
 <head lang="pt-br">
-    <title>Pagina</title>
+    <title>Cadastro</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
-    <!--<link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="estilos/desktop/indexD.css">-->
 </head>
 <body>
     <main>
         <section class="flex">
-            <form method="post" name="formCadastro" action="scripts/salvarBD.php" enctype="multipart/form-data">
+            <form method="post" name="formUsuario" action="codigos/salvarUsuario.php" enctype="multipart/form-data">
                 <H2>Cadastro de Usúario</H2>
                 <table>
                     <tr>

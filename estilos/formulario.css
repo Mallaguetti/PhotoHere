@@ -1,11 +1,11 @@
 body{
-    background-color: var(--claro);
+    background-color:var(--claro);
 }
 form{
-    background-color: var(--cor2);
+    background-color:var(--cor2);
     padding:.6rem;
     border-radius:.3rem;
-    box-shadow: #00000066 .1rem .1rem .3rem;
+    box-shadow:#00000066 .1rem .1rem .3rem;
 }
 table{
     margin:.6rem auto;
@@ -16,7 +16,7 @@ input{
     padding:.6rem;
     border-radius:.3rem;
     border:.1rem solid var(--escuro);
-    background-color: var(--claro);
+    background-color:var(--claro);
     box-shadow:#00000066 .1rem .1rem .3rem;
     outline:none;
 }

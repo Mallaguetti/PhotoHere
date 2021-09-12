@@ -1,0 +1,22 @@
+body{
+    background-image:url(../../imagens/camera.jpg);
+    background-size:auto max(100vh, 75vw);
+    background-position:center 0;
+    background-repeat:no-repeat;
+}
+#login{
+    background-color:unset;
+    box-shadow:unset;
+}
+#s2{
+    background-color:var(--claro);
+    text-align:center;
+}
+#s2 div{
+    margin:auto;
+    z-index:2;
+}
+#fotografo{
+    height: 90vh;
+    z-index:1;
+}

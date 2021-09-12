@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <head lang="pt-br">
-    <title>Pagina</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
-    <!--<link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="estilos/desktop/indexD.css">-->
 </head>
 <body>
     <main>
         <section class="flex">
-            <form method="post" name="formLogin" action="scripts/salvarBD.php" enctype="multipart/form-data">
+            <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
                 <H2>Login</H2>
                 <table>
                     <tr>
