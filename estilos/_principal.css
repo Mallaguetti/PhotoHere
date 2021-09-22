@@ -76,18 +76,16 @@ section{
 .flex{
     display:flex;
     flex-wrap:wrap;
-}
-.flex > div{
-    width:100%;
+    justify-content:center;
 }
 .topo{
     align-content:flex-start;
 }
 .centro{
-    align-items:center;
+    align-content:center;
 }
 .base{
-    align-items:flex-end;
+    align-content:flex-end;
 }
 /*Estilos Rodape*/
 footer{
