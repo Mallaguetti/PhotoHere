@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Cores*/
 :root{
     --cor1:#ff9022;
     --cor2:#ffcfa0;
@@ -9,6 +10,7 @@
     --escuro:#000316;
     --claro:#ffffff;
 }
+/*Estilos de Base*/
 *{
     font-family:Arial,Helvetica,sans-serif;
     margin:0;
@@ -20,6 +22,7 @@ body{
     color:var(--escuro);
     text-align:justify;
 }
+/*Estilos Cabecalho*/
 header{
     background-color:var(--cor5t);
     height:9vh;
@@ -31,29 +34,18 @@ header{
     align-items:center;
     z-index:9;
 }
-main{
-    min-height:90vh;
-    min-width:260px;
-}
-footer{
-    background-color: var(--cor5);
-    min-height:10vh;
-}
-nav{
+header > nav{
     height:62.5%;
-    width:100%;
-    display:flex;
-    justify-content:flex-end;
-}
-section{
-    width:86%;
-    max-width:1000px;
-    min-height:100vh;
-    padding:0 max(7%,calc(50% - 500px));
 }
 #logo{
     margin-right:auto;
     font-size:min(1.8em,6vh);
+}
+/*Estilos Botões*/
+nav{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
 }
 .bt{
     background-color:var(--cor1);
@@ -70,16 +62,35 @@ section{
     color:var(--cor2);
     transition:200ms;
 }
+/*Estilos Corpo*/
+main{
+    min-height:90vh;
+    min-width:260px;
+}
+section{
+    width:86%;
+    max-width:1000px;
+    min-height:100vh;
+    padding:0 max(7%,calc(50% - 500px));
+}
 .flex{
     display:flex;
-    align-items:center;
-    align-content:center;
-    justify-content: space-around;
-    align-content: space-around;
+    flex-wrap:wrap;
+}
+.flex > div{
+    width:100%;
 }
 .topo{
-    align-items: flex-start;
+    align-content:flex-start;
+}
+.centro{
+    align-items:center;
 }
 .base{
-    align-items: flex-end;
+    align-items:flex-end;
+}
+/*Estilos Rodape*/
+footer{
+    background-color: var(--cor5);
+    min-height:10vh;
 }
