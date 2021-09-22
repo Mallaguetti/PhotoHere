@@ -7,7 +7,7 @@
 </head>
 <body>
     <main>
-        <section class="flex ">
+        <section class="flex centro">
             <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
                 <H2>Login</H2>
                 <table>
@@ -28,6 +28,9 @@
                     </tr>
                 </table>
             </form>
+            <div>
+                ssss
+            </div>
         </section>
     </main>
 </body>

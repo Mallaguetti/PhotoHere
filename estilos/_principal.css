@@ -76,7 +76,7 @@ section{
 .flex{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content:space-between;
 }
 .topo{
     align-content:flex-start;

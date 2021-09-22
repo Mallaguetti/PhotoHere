@@ -7,7 +7,7 @@
 </head>
 <body>
     <main>
-        <section class="flex">
+        <section class="flex centro">
             <form method="post" name="formUsuario" action="codigos/salvarUsuario.php" enctype="multipart/form-data">
                 <H2>Cadastro de Usúario</H2>
                 <table>
