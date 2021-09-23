@@ -1,0 +1,19 @@
+.pesquisa{
+    width: 100%;
+    margin:0 0 .6rem;
+}
+.resultado{
+    outline:1px solid black;
+    border-radius:.3rem;
+    margin-top:.6rem;
+    box-shadow:#00000066 .1rem .1rem .3rem;
+    padding:.6rem;
+    justify-content: space-between;
+    padding-right:10%;
+}
+.resultado img{
+    height: 20Vh;
+}
+.resultado > .bt{
+    padding: .3rem;
+}

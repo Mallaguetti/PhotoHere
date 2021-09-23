@@ -10,7 +10,7 @@
         <nav><a class="bt"id="logo"href="index.html">PhotoHere</a></nav>
     </header>
     <main>
-        <section class="flex centro" id="s1">
+        <section class="flex centro">
             <form method="post" name="formEnsaio" action="codigos/salvarEnsaio.php" enctype="multipart/form-data">
                 <H2>Criar Ensaio</H2>
                 <table>

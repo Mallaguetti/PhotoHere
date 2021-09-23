@@ -52,7 +52,7 @@ nav{
     color:var(--claro);
     text-align:center;
     cursor:pointer;
-    padding:0 1vw;
+    padding:0 .3rem;
     border-radius:.3rem;
     font-size:min(1.2em,5vh);
     display:flex;
@@ -76,7 +76,8 @@ section{
 .flex{
     display:flex;
     flex-wrap:wrap;
-    justify-content:space-between;
+    justify-content:center;
+    align-items:center;
 }
 .topo{
     align-content:flex-start;
@@ -86,6 +87,10 @@ section{
 }
 .base{
     align-content:flex-end;
+}
+#s1{
+    padding-top:10vh;
+    min-height: 90vh;
 }
 /*Estilos Rodape*/
 footer{
