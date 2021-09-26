@@ -50,14 +50,17 @@ nav{
 .bt{
     background-color:var(--cor1);
     color:var(--claro);
-    margin-right:.3rem;
+    padding: .6rem;
     text-align:center;
     cursor:pointer;
-    padding:0 .3rem;
     border-radius:.3rem;
     font-size:min(1.2em,5vh);
     display:flex;
     align-items:center;
+}
+.cab{
+    margin-right:.3rem;
+    padding:0 .3rem;
 }
 .bt:hover{
     color:var(--cor2);
@@ -80,15 +83,7 @@ section{
     justify-content:center;
     align-items:center;
 }
-.topo{
-    align-content:flex-start;
-}
-.centro{
-    align-content:center;
-}
-.base{
-    align-content:flex-end;
-}
+
 #s1{
     padding-top:10vh;
     min-height: 90vh;

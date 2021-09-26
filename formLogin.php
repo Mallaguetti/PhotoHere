@@ -14,7 +14,6 @@
     <main>
         <section id="s1" class="flex centro">
             <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
-                <a href="index.html" class="bt">🠔 Volta</a>
                 <table>
                     <tr>
                         <th> Usuário: </th>
@@ -29,7 +28,7 @@
                         <td><input type="text" name="txtNome" size="40" required=""></td>
                     </tr>     
                     <tr>
-                        <td><input type="submit" name="btnEnviar" value="Enviar"><input type="reset" name="btnLimpar" value="Limpar"></td>
+                        <td><input type="submit" name="btnEnviar" value="Entrar"></td>
                     </tr>
                 </table>
             </form>
