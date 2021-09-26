@@ -2,7 +2,7 @@
     $nome = $_POST["nomeCliente"];
     $data = $_POST["dtEnsaio"];
 
-    include_once"conect.php";
+    include_once"conectar.php";
     include_once"daoEnsaio.php";
 
     inserirEnsaio($conexao, $data);
