@@ -7,7 +7,9 @@
 </head>
 <body>
     <header>
-        <nav><a class="bt"id="logo"href="index.html">PhotoHere</a></nav>
+        <nav>
+            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+        </nav>
     </header>
     <main>
         <section class="flex centro">

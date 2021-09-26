@@ -4,6 +4,9 @@ body{
     background-position:center 0;
     background-repeat:no-repeat;
 }
+header{
+    background-color:var(--cor5t);
+}
 #login{
     background-color:unset;
     box-shadow:unset;

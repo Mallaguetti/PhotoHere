@@ -32,32 +32,36 @@
             </form>
             <div class="pesquisa">         
                 <?php
+
+                    $tipo = 1;
+                    $texto = "";
+
                     if (isset($_POST["btnPesquisar"])) {
                         $tipo = $_POST["pesquisa"];
                         $texto = $_POST["texto"];
-                        require_once 'codigos/conectar.php';
-                        require_once 'codigos/daoFotografo.php';
-
-                        $resultado = pesquisarFotografo($conexao, $tipo, $texto);
-
-                        while ($registro = mysqli_fetch_assoc($resultado)) {
-                            $nome = $registro["nome"];
-                            echo "
-                            <div class='flex centro resultado'>
-                                <table>
-                                    <tr>
-                                        <td><h2>$nome</h2></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src='imagens/perfil.jpg' alt=''></td>
-                                    </tr>
-                                </table>
-                                <div class='bt'>Ver perfil</div>
-                            </div>
-                            ";
-                        }
                     };
-                    
+
+                    require_once 'codigos/conectar.php';
+                    require_once 'codigos/daoFotografo.php';
+
+                    $resultado = pesquisarFotografo($conexao, $tipo, $texto);
+
+                    while ($registro = mysqli_fetch_assoc($resultado)) {
+                        $nome = $registro["nome"];
+                        echo "
+                        <div class='flex centro resultado'>
+                            <table>
+                                <tr>
+                                    <td><h2>$nome</h2></td>
+                                </tr>
+                                <tr>
+                                    <td><img src='imagens/perfil.jpg' alt=''></td>
+                                </tr>
+                            </table>
+                            <div class='bt'>Ver perfil</div>
+                        </div>
+                        ";
+                    }
                 ?>
             </div>
         </section>

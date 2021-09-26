@@ -6,8 +6,13 @@
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+        </nav>
+    </header>
     <main>
-        <section class="flex centro">
+        <section id="s1" class="flex centro">
             <form method="post" name="formUsuario" action="codigos/salvarUsuario.php" enctype="multipart/form-data">
                 <H2>Cadastro de Usúario</H2>
                 <table>

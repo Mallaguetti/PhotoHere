@@ -6,10 +6,15 @@
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+        </nav>
+    </header>
     <main>
-        <section class="flex centro">
+        <section id="s1" class="flex centro">
             <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
-                <H2>Login</H2>
+                <a href="index.html" class="bt">🠔 Volta</a>
                 <table>
                     <tr>
                         <th> Usuário: </th>
