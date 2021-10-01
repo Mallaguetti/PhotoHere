@@ -23,6 +23,11 @@ CREATE TABLE `fotografo` (
   `usuario` varchar(45) NOT NULL,
   `senha` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
+  `cep` varchar(10),
+  `apresentação` varchar(255),
+  `intagram` varchar(55),
+  `facebook` varchar(55),
+  `whats` varchar(30),
   PRIMARY KEY(idFotografo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
