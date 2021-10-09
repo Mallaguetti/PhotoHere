@@ -83,10 +83,9 @@ section{
     justify-content:center;
     align-items:center;
 }
-
 #s1{
     padding-top:10vh;
-    min-height: 90vh;
+    min-height:90vh;
 }
 /*Estilos Rodape*/
 footer{

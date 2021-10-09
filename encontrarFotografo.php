@@ -32,7 +32,6 @@
             </form>
             <div class="pesquisa">         
                 <?php
-
                     $tipo = 1;
                     $texto = "";
 

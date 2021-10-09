@@ -12,7 +12,7 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex centro">
+        <section id="s1" class="flex">
             <form method="post" name="formUsuario" action="codigos/salvarUsuario.php" enctype="multipart/form-data">
                 <H2>Cadastro de Usúario</H2>
                 <table>

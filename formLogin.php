@@ -12,7 +12,7 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex centro">
+        <section id="s1" class="flex">
             <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
                 <table>
                     <tr>

@@ -12,7 +12,7 @@
         </nav>
     </header>
     <main>
-        <section class="flex centro">
+        <section class="flex">
             <form method="post" name="formEnsaio" action="codigos/salvarEnsaio.php" enctype="multipart/form-data">
                 <H2>Criar Ensaio</H2>
                 <table>
