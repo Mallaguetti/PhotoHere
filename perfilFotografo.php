@@ -17,7 +17,7 @@
     <main>
         <section id="s1" class="flex">
             <?php
-                include_once "validar.php";
+                include_once "codigos/validar.php";
                 echo "olá $nomeSessao";
             ?>
             <div>
