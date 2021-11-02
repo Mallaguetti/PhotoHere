@@ -63,8 +63,8 @@
                     </tr> 
                         <?php
                             if(isset($_GET["msg"])){
-                                $test=$_GET["msg"];
-                                echo "<tr><td>$test</td></tr>";
+                                $msg=$_GET["msg"];
+                                echo "<tr><td>$msg</td></tr>";
                             };
                         ?>
                     <tr>

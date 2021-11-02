@@ -17,12 +17,15 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex"></section>
+        <section id="s1" class="flex"></section>    
             <div id="usuario">
-                
+            
             </div>
             <div id="conteudo">
-
+                <?php
+                    include_once "codigos/validar.php";
+                    echo "<p>olá $nomeSessao</p>";
+                ?>
             </div>
         </section>
     </main>

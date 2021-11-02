@@ -1,4 +1,3 @@
-drop database photo_here;
 
 create database photo_here
 default charset utf8

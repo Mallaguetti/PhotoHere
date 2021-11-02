@@ -13,20 +13,26 @@
     </header>
     <main>
         <section id="s1" class="flex">
-            <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
+            <form method="post" name="formLogin" action="codigos/login.php" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <th> Usuário: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="txtNome" size="40" required=""></td>
+                        <td><input type="text" name="txtLogin" size="40" required=""></td>
                     </tr>
                     <tr>
                         <th> Senha: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="txtNome" size="40" required=""></td>
-                    </tr>     
+                        <td><input type="text" name="txtSenha" size="40" required=""></td>
+                    </tr>
+                    <?php
+                        if(isset($_GET["msg"])){
+                            $msg=$_GET["msg"];
+                            echo "<tr><td>$msg</td></tr>";
+                        };
+                    ?>
                     <tr>
                         <td><input type="submit" name="btnEnviar" value="Entrar"></td>
                     </tr>

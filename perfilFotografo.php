@@ -16,6 +16,10 @@
     </header>
     <main>
         <section id="s1" class="flex">
+            <?php
+                include_once "validar.php";
+                echo "olá $nomeSessao";
+            ?>
             <div>
                 <nav>
                     
