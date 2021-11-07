@@ -1,3 +1,6 @@
+<?php
+    require_once "codigos/validarSessao.php";
+?>
 <!DOCTYPE html>
 <head lang="pt-br">
     <title>PhotoHere</title>
@@ -11,9 +14,7 @@
         <nav>
             <a class="bt cab"id="logo"href="index.php">PhotoHere</a>
             <?php
-                session_start();
-                if (isset($_SESSION["nomeSessao"])) {
-                    echo ("<a class='bt cab'id='login'href='formLogin.php'>$nomeSessao</a>");
+                if ($sessaoExiste) {
                     echo ("<a class='bt cab'href='codigos/logout.php'>Sair</a>");
                 } else {
                     echo ("<a class='bt cab'id='login'href='formLogin.php'>Login</a>");

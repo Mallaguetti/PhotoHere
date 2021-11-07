@@ -1,5 +1,9 @@
 <?php
-    require_once "codigos/validar.php";
+    require_once "codigos/validarSessao.php";
+    loginRequerido();
+    if (!$isFotografo){
+        header("Location:perfilCliente.php");
+    };
 ?>
 
 <!DOCTYPE html>

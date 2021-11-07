@@ -3,8 +3,8 @@
         $sqlFotografo = "INSERT INTO fotografo(nome, sobreNome, usuario, senha) VALUES('$nome','$sobreNome','$usuario', '$senha')";
         mysqli_query($conexao, $sqlFotografo);
     };
-    function fotografoExiste($conexao, $fotografo){
-        $sql = "SELECT * FROM fotografo WHERE usuario = '$fotografo'";
+    function fotografoExiste($conexao, $usuario){
+        $sql = "SELECT * FROM fotografo WHERE usuario = '$usuario'";
         $resultado = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         if (mysqli_fetch_assoc($resultado)){
             return true;
@@ -12,8 +12,8 @@
             return false;
         };
     };
-    function loginFotografo($conexao, $login, $senha){
-        $sql = "SELECT * FROM fotografo WHERE usuario = '$login' AND senha = '$senha'";
+    function loginFotografo($conexao, $usuario, $senha){
+        $sql = "SELECT * FROM fotografo WHERE usuario = '$usuario' AND senha = '$senha'";
         $res =  mysqli_query($conexao, $sql);
         $registro = mysqli_fetch_assoc($res);
         return $registro;

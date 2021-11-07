@@ -1,7 +1,10 @@
 <?php
-    require_once "codigos/validar.php";
+    require_once "codigos/validarSessao.php";
+    loginRequerido();
+    if ($isFotografo){
+        header("Location:perfilFotografo.php");
+    };
 ?>
-
 <!DOCTYPE html>
 <head lang="PT-BR">
     <title>PhotoHere</title>
