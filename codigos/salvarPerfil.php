@@ -11,4 +11,5 @@
 
     salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentação);
     
+    header("Location:../perfilFotografoEditar.php?msg=Perfil salvo com sucesso")
 ?>

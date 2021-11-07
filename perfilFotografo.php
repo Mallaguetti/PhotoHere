@@ -4,14 +4,7 @@
     if (!$isFotografo){
         header("Location:perfilCliente.php");
     };
-    $id = $_SESSION["idSessao"];
-    $nome = $_SESSION["nomeSessao"];
-    $email = $_SESSION["emailSessao"];
-    $cep = $_SESSION["cepSessao"];
-    $apresentação = $_SESSION["apresentaçãoSessao"];
-    $instagram = $_SESSION["instagramSessao"];
-    $facebook = $_SESSION["facebookSessao"];
-    $celular = $_SESSION["celularSessao"];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -29,7 +29,6 @@
     <main>
         <section id="s1" class="flex">
                 <?php
-                    echo "olá $nome";
                 ?>
             <div id="usuario">
             </div>

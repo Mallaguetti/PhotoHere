@@ -1,16 +1,22 @@
 <?php
+    include_once "codigos/conectar.php";
     require_once "codigos/validarSessao.php";
+    include_once "codigos/daoFotografo.php";
+
     loginRequerido();
     if (!$isFotografo){
         header("Location:perfilCliente.php");
     };
     $id = $_SESSION["idSessao"];
-    $email = $_SESSION["emailSessao"];
-    $cep = $_SESSION["cepSessao"];
-    $apresentação = $_SESSION["apresentaçãoSessao"];
-    $instagram = $_SESSION["instagramSessao"];
-    $facebook = $_SESSION["facebookSessao"];
-    $celular = $_SESSION["celularSessao"];
+    $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 3, $id));
+
+    $nome = $registro["nome"];
+    $email = $registro["email"];
+    $cep = $registro["cep"];
+    $apresentação = $registro["apresentação"];
+    $instagram = $registro["instagram"];
+    $facebook = $registro["facebook"];
+    $celular = $registro["celular"];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -64,7 +70,13 @@
                     </tr>
                     <tr>
                         <td><input type="text" name="apresentação" size="40" value="<?php echo $apresentação?>" required=""></td>
-                    </tr>     
+                    </tr>
+                    <?php
+                        if(isset($_GET["msg"])){
+                            $msg=$_GET["msg"];
+                            echo "<tr><td>$msg</td></tr>";
+                        };
+                    ?>
                     <tr>
                         <td>
                             <input type="submit" name="btnEnviar" value="Salvar Perfil">
