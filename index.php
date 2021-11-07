@@ -13,7 +13,6 @@
             <?php
                 session_start();
                 if (isset($_SESSION["nomeSessao"])) {
-                    
                     echo ("<a class='bt cab'id='login'href='formLogin.php'>$nomeSessao</a>");
                     echo ("<a class='bt cab'href='formCadUsuario.php'>Sair</a>");
                 } else {

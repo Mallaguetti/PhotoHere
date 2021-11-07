@@ -26,19 +26,31 @@
                         </td>
                     </tr>
                     <tr>
-                        <th> Crie um Usuário: </th>
+                        <th>Nome</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nome" size="40" required=""></td>
+                    </tr>
+                    <tr>
+                        <th>Sobrenome</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="sobrenome" size="40" required=""></td>
+                    </tr>
+                    <tr>
+                        <th>Usuário: </th>
                     </tr>
                     <tr>
                         <td><input type="text" name="usuario" size="40" required=""></td>
                     </tr>
                     <tr>
-                        <th> Crie uma Senha: </th>
+                        <th>Senha: </th>
                     </tr>
                     <tr>
                         <td><input type="text" name="senha1" size="40" required=""></td>
                     </tr>   
                     <tr>
-                        <th> Repita a Senha: </th>
+                        <th>Repita a Senha: </th>
                     </tr>
                     <tr>
                         <td><input type="text" name="senha2" size="40" required=""></td>
