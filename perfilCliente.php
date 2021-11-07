@@ -1,3 +1,7 @@
+<?php
+    require_once "codigos/validar.php";
+?>
+
 <!DOCTYPE html>
 <head lang="PT-BR">
     <title>PhotoHere</title>
@@ -10,22 +14,20 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+            <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <a class="bt cab" href="#">Ver Ensaios</a>
             <a class="bt cab" href="encontrarFotografo.php">Procurar Fotografo</a>
             <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex"></section>    
-            <div id="usuario">
-            
-            </div>
-            <div id="conteudo">
+        <section id="s1" class="flex">
                 <?php
-                    include_once "codigos/validar.php";
-                    echo "<p>olá $nomeSessao</p>";
+                    echo "olá $nomeSessao";
                 ?>
+            <div id="usuario">
+            </div>
+            <div id="conteudo">          
             </div>
         </section>
     </main>

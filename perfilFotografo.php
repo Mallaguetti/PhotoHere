@@ -1,3 +1,7 @@
+<?php
+    require_once "codigos/validar.php";
+?>
+
 <!DOCTYPE html>
 <head lang="pt-br">
     <title>Meu Perfil</title>
@@ -8,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+            <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <a class="bt cab" href="editarPerfil.php">Editar Perfil</a>
             <a class="bt cab" href="formEnsaio.php">Criar ensaio</a>
             <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
@@ -17,7 +21,6 @@
     <main>
         <section id="s1" class="flex">
             <?php
-                include_once "codigos/validar.php";
                 echo "olá $nomeSessao";
             ?>
             <div>

@@ -8,7 +8,7 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+            <a class="bt"id="logo"href="index.php">PhotoHere</a>
         </nav>
     </header>
     <main>
@@ -24,24 +24,6 @@
                             <input type="radio" name="usuarioTipo" value="1" checked>Cliente
                             <input type="radio" name="usuarioTipo" value="2">Fotógrafo
                         </td>
-                    </tr>
-                    <tr>
-                        <th> Primeiro Nome: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="nome" size="40" required=""></td>
-                    </tr>
-                    <tr>
-                        <th> Segundo Nome: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="sobreNome" size="40" required=""></td>
-                    </tr>
-                    <tr>
-                        <th> Email: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="email" size="40" required=""></td>
                     </tr>
                     <tr>
                         <th> Crie um Usuário: </th>

@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.html">PhotoHere</a>
+            <a class="bt"id="logo"href="index.php">PhotoHere</a>
         </nav>
     </header>
     <main>

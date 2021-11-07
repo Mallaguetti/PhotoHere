@@ -1,6 +1,6 @@
 <?php
     function inserirCliente($conexao, $nome, $sobreNome, $usuario, $senha1, $email){
-        $sqlCliente = "INSERT INTO cliente(nome, sobreNome, usuario, senha, email) VALUES('$nome', '$sobreNome', '$usuario', '$senha1', '$email')";
+        $sqlCliente = "INSERT INTO cliente(usuario, senha) VALUES('$usuario', '$senha1')";
         mysqli_query($conexao, $sqlCliente);
     };
     function clienteExiste($conexao, $cliente){

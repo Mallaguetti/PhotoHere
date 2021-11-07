@@ -1,8 +1,5 @@
 <?php
     $usuarioTipo = $_POST["usuarioTipo"];
-    $nome = $_POST["nome"];
-    $sobreNome = $_POST["sobreNome"];
-    $email = $_POST["email"];
     $usuario = $_POST["usuario"];
     $senha1 = $_POST["senha1"];
     $senha2 = $_POST["senha2"];
