@@ -15,6 +15,7 @@
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <a class="bt cab" href="editarPerfil.php">Editar Perfil</a>
             <a class="bt cab" href="formEnsaio.php">Criar ensaio</a>
+            <a class="bt cab" href="codigos/logout.php">Sair</a>
             <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
         </nav>
     </header>

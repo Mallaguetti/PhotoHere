@@ -14,7 +14,7 @@
                 session_start();
                 if (isset($_SESSION["nomeSessao"])) {
                     echo ("<a class='bt cab'id='login'href='formLogin.php'>$nomeSessao</a>");
-                    echo ("<a class='bt cab'href='formCadUsuario.php'>Sair</a>");
+                    echo ("<a class='bt cab'href='codigos/logout.php'>Sair</a>");
                 } else {
                     echo ("<a class='bt cab'id='login'href='formLogin.php'>Login</a>");
                     echo ("<a class='bt cab'href='formCadUsuario.php'>Cadastrar</a>");
