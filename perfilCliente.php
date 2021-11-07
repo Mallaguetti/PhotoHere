@@ -4,7 +4,6 @@
     if ($isFotografo){
         header("Location:perfilFotografo.php");
     };
-    $nome = $_SESSION["nomeSessao"];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

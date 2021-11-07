@@ -16,11 +16,20 @@
         if ($senha==$senha2){
             if ($usuarioTipo==1) {
                 inserirCliente($conexao, $nome, $sobreNome, $usuario, $senha, $email);
-                header("Location:../perfilCliente.php?msg=Cadastrado com sucesso");
+
+                session_start();
+                $_SESSION["usuarioSessao"] = $usuario;
+                $_SESSION["senhaSessao"] = $senha;
+
+                header("Location:login.php");
             };
             if ($usuarioTipo==2) {
                 inserirFotografo($conexao, $nome, $sobreNome, $usuario, $senha, $email);
-                header("Location:../perfilFotografo.php?msg=Cadastrado com sucesso");
+
+                $_POST["txtLogin"] = $usuario;
+                $_POST["txtSenha"] = $senha;
+
+                header("Location:login.php");
             };
         } else {
             header("Location:../formCadUsuario.php?msg=Senhas não correspondem");
