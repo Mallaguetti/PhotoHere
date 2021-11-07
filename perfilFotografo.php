@@ -5,9 +5,9 @@
         header("Location:perfilCliente.php");
     };
 ?>
-
 <!DOCTYPE html>
-<head lang="pt-br">
+<html lang="pt-br">
+<head>
     <title>Meu Perfil</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
@@ -25,14 +25,14 @@
     </header>
     <main>
         <section id="s1" class="flex">
-            <?php
-                echo "olá $nomeSessao";
-            ?>
             <div>
                 <nav>
-                    
+                    <?php
+                    echo "olá $nomeSessao";
+                    ?>
                 </nav>
             </div>
         </section>
     </main>
 </body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<head lang="pt-br">
+<html lang="pt-br">
+<head>
     <title>PhotoHere</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
@@ -66,3 +67,4 @@
         </section>
     </main>
 </body>
+</html>
