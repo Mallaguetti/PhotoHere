@@ -4,6 +4,7 @@
     if ($isFotografo){
         header("Location:perfilFotografo.php");
     };
+    $nome = $_SESSION["nomeSessao"];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,7 +29,7 @@
     <main>
         <section id="s1" class="flex">
                 <?php
-                    echo "olá $nomeSessao";
+                    echo "olá $nome";
                 ?>
             <div id="usuario">
             </div>

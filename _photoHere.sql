@@ -1,4 +1,4 @@
-
+DROP DATABASE photo_here;
 create database photo_here
 default charset utf8
 default collate utf8_general_ci;
@@ -24,11 +24,19 @@ CREATE TABLE `fotografo` (
   `email` varchar(45) NOT NULL,
   `cep` varchar(10),
   `apresentação` varchar(255),
-  `intagram` varchar(55),
+  `instagram` varchar(55),
   `facebook` varchar(55),
-  `whats` varchar(30),
+  `celular` varchar(30),
   PRIMARY KEY(idFotografo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `Album` (
+  `idAlbum` int(11) NOT NULL AUTO_INCREMENT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `Foto` (
+  `idFoto` int(11) NOT NULL AUTO_INCREMENT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Ensaio` (
   `idEnsaio` int(11) NOT NULL AUTO_INCREMENT,

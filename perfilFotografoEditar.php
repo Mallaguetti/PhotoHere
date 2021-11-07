@@ -1,3 +1,17 @@
+<?php
+    require_once "codigos/validarSessao.php";
+    loginRequerido();
+    if (!$isFotografo){
+        header("Location:perfilCliente.php");
+    };
+    $id = $_SESSION["idSessao"];
+    $email = $_SESSION["emailSessao"];
+    $cep = $_SESSION["cepSessao"];
+    $apresentação = $_SESSION["apresentaçãoSessao"];
+    $instagram = $_SESSION["instagramSessao"];
+    $facebook = $_SESSION["facebookSessao"];
+    $celular = $_SESSION["celularSessao"];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,40 +32,44 @@
     </header>
     <main>
         <section id="s1" class="flex">
-            <form method="post" name="formLogin" action="codigos/#" enctype="multipart/form-data">
+            <form method="post" name="formLogin" action="codigos/salvarPerfil.php" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?php echo $id?>">
                 <table>
                     <tr>
                         <th> Cep: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="cep" size="40" required=""></td>
+                        <td><input type="text" name="cep" size="40" value="<?php echo $cep?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Instagram: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="instagram" size="40" required=""></td>
+                        <td><input type="text" name="instagram" size="40" value="<?php echo $instagram?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Facebook: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="facebook" size="40" required=""></td>
+                        <td><input type="text" name="facebook" size="40" value="<?php echo $facebook?>" required=""></td>
                     </tr>
                     <tr>
-                        <th> WhathsApp: </th>
+                        <th> Celular: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="whathsApp" size="40" required=""></td>
+                        <td><input type="text" name="celular" size="40" value="<?php echo $celular?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Apresentação breve: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="apresentação" size="40" required=""></td>
+                        <td><input type="text" name="apresentação" size="40" value="<?php echo $apresentação?>" required=""></td>
                     </tr>     
                     <tr>
-                        <td><input type="submit" name="btnEnviar" value="Salvar Perfil"></td>
+                        <td>
+                            <input type="submit" name="btnEnviar" value="Salvar Perfil">
+                            <a href="perfilFotografo.php">Cancelar</a>
+                        </td>
                     </tr>
                 </table>
             </form>
