@@ -37,14 +37,14 @@
         return $resultado;
     };
 
-    function salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentação){
+    function salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentacao){
         
         $sql = "UPDATE fotografo SET 
         cep = '$cep',
         instagram = '$instagram',
         facebook = '$facebook',
         celular = '$celular',
-        apresentação = '$apresentação'
+        apresentacao = '$apresentacao'
         WHERE idFotografo = $id";
 
         mysqli_query($conexao, $sql) or die (mysqli_error($conexao));

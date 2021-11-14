@@ -4,12 +4,12 @@
     $instagram = $_POST["instagram"];
     $facebook = $_POST["facebook"];
     $celular = $_POST["celular"];
-    $apresentação = $_POST["apresentação"];
+    $apresentacao = $_POST["apresentacao"];
 
     require_once "conectar.php";
     require_once "daoFotografo.php";
 
-    salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentação);
+    salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentacao);
     
     header("Location:../perfilFotografoEditar.php?msg=Perfil salvo com sucesso")
 ?>

@@ -13,7 +13,7 @@
     $nome = $registro["nome"];
     $email = $registro["email"];
     $cep = $registro["cep"];
-    $apresentação = $registro["apresentacao"];
+    $apresentacao = $registro["apresentacao"];
     $instagram = $registro["instagram"];
     $facebook = $registro["facebook"];
     $celular = $registro["celular"];
@@ -69,7 +69,7 @@
                         <th> Apresentação breve: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="apresentação" size="40" value="<?php echo $apresentação?>" required=""></td>
+                        <td><input type="text" name="apresentacao" size="40" value="<?php echo $apresentacao?>" required=""></td>
                     </tr>
                     <?php
                         if(isset($_GET["msg"])){

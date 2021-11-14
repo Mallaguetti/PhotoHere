@@ -13,7 +13,7 @@
     $nome = $registro["nome"];
     $email = $registro["email"];
     $cep = $registro["cep"];
-    $apresentação = $registro["apresentacao"];
+    $apresentacao = $registro["apresentacao"];
     $instagram = $registro["instagram"];
     $facebook = $registro["facebook"];
     $celular = $registro["celular"];
@@ -41,16 +41,16 @@
             <div class="flex cabecalho">
                 <a id="fotoPerfil" href=""><img src="imagens/perfil.jpg" alt=""></a>
                 <div id="nome">
-                    <h1>meu nome é Fulano</h1>
-                    <p>descrição com us text Lorem ipsum dolor sit amet consectetur adipisicing elit. A corrupti laboriosam nam error voluptatum? Quae, maiores eum exercitationem corporis aliquid distinctio esse deleniti eaque temporibus est dolor reprehenderit modi mollitia?</p>
+                    <h1><?php echo $nome?></h1>
+                    <p><?php echo $apresentacao?></p>
                 </div>
             </div>
             <div>
                 <h2>Meus dados</h2>
-                <p>nuemro</p>
-                <p>email</p>
-                <p>facebook</p>
-                <p>insta</p>
+                <p>nuemro: <?php echo $celular?></p>
+                <p>email: <?php echo $email?></p>
+                <p>facebook: <?php echo $facebook?></p>
+                <p>insta: <?php echo $instagram?></p>
             </div>
             <div>
                 <h2>Ensaios marcados</h2>
