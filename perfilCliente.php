@@ -22,7 +22,6 @@
             <a class="bt cab" href="#">Ver Ensaios</a>
             <a class="bt cab" href="encontrarFotografo.php">Procurar Fotografo</a>
             <a class="bt cab" href="codigos/logout.php">Sair</a>
-            <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
         </nav>
     </header>
     <main>
