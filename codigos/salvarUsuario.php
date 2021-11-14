@@ -6,9 +6,9 @@
     $senha = $_POST["senha1"];
     $senha2 = $_POST["senha2"];
 
-    include_once "conectar.php";
-    include_once "daoFotografo.php";
-    include_once "daoCliente.php";
+    require_once "conectar.php";
+    require_once "daoFotografo.php";
+    require_once "daoCliente.php";
 
     if (fotografoExiste($conexao, $usuario) || clienteExiste($conexao, $usuario)){
         header("Location:../formCadUsuario.php?msg=Usuario já existe");
@@ -26,8 +26,9 @@
             if ($usuarioTipo==2) {
                 inserirFotografo($conexao, $nome, $sobreNome, $usuario, $senha, $email);
 
-                $_POST["txtLogin"] = $usuario;
-                $_POST["txtSenha"] = $senha;
+                session_start();
+                $_SESSION["usuarioSessao"] = $usuario;
+                $_SESSION["senhaSessao"] = $senha;
 
                 header("Location:login.php");
             };

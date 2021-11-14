@@ -1,7 +1,7 @@
 <?php
-    include_once "conectar.php";
-    include_once "daoCliente.php";
-    include_once "daoFotografo.php";
+    require_once "conectar.php";
+    require_once "daoCliente.php";
+    require_once "daoFotografo.php";
 
     session_start();
 

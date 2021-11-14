@@ -6,8 +6,8 @@
     $celular = $_POST["celular"];
     $apresentação = $_POST["apresentação"];
 
-    include_once "conectar.php";
-    include_once "daoFotografo.php";
+    require_once "conectar.php";
+    require_once "daoFotografo.php";
 
     salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentação);
     

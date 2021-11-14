@@ -1,7 +1,7 @@
 <?php
-    include_once "codigos/conectar.php";
+    require_once "codigos/conectar.php";
     require_once "codigos/validarSessao.php";
-    include_once "codigos/daoFotografo.php";
+    require_once "codigos/daoFotografo.php";
 
     loginRequerido();
     if (!$isFotografo){
@@ -13,7 +13,7 @@
     $nome = $registro["nome"];
     $email = $registro["email"];
     $cep = $registro["cep"];
-    $apresentação = $registro["apresentação"];
+    $apresentação = $registro["apresentacao"];
     $instagram = $registro["instagram"];
     $facebook = $registro["facebook"];
     $celular = $registro["celular"];

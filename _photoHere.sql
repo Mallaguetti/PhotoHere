@@ -23,20 +23,12 @@ CREATE TABLE `fotografo` (
   `senha` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `cep` varchar(10),
-  `apresentação` varchar(255),
+  `apresentacao` varchar(255),
   `instagram` varchar(55),
   `facebook` varchar(55),
   `celular` varchar(30),
   PRIMARY KEY(idFotografo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE `Album` (
-  `idAlbum` int(11) NOT NULL AUTO_INCREMENT
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE `Foto` (
-  `idFoto` int(11) NOT NULL AUTO_INCREMENT
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Ensaio` (
   `idEnsaio` int(11) NOT NULL AUTO_INCREMENT,

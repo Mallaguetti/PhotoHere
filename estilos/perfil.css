@@ -2,3 +2,20 @@ a > img{
     height: 100%;
     border-radius: 20%;
 }
+#fotoPerfil{
+    align-self: flex-start;
+}
+#fotoPerfil > img{
+    height: max(20vh,10vw);
+}
+.cabecalho{
+    align-items:flex-end;
+    flex-wrap:nowrap;
+}
+#nome{
+
+    padding: 0 0 .6rem .6rem;
+}
+#s1{
+    padding-top:15vh;
+}
