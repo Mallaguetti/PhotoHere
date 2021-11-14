@@ -1,3 +1,9 @@
+<?php
+    if (isset($_POST["idFotografo"])){
+        $id=$_POST["idFotografo"];
+        header("Location:encontrarFotografoPerfil.php?idFotografo=$id" );
+    };
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,6 +19,7 @@
     <header>
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
+            <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <main>
@@ -48,18 +55,19 @@
 
                     while ($registro = mysqli_fetch_assoc($resultado)) {
                         $nome = $registro["nome"];
+                        $apresentacao = $registro["apresentacao"];
+                        $id = $registro["idFotografo"];
                         echo "
-                        <div class='flex centro resultado'>
+                        <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
                             <table>
                                 <tr>
-                                    <td><h2>$nome</h2></td>
-                                </tr>
-                                <tr>
                                     <td><img src='imagens/perfil.jpg' alt=''></td>
+                                    <td><h2>$nome</h2><p>$apresentacao</p></td>
                                 </tr>
                             </table>
-                            <div class='bt'>Ver perfil</div>
-                        </div>
+                            <input type='hidden' name='idFotografo' value='$id'>
+                            <input type='submit' name='btnEnviar' value='Ver Perfil'>
+                            </form>
                         ";
                     }
                 ?>

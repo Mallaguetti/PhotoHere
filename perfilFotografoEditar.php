@@ -8,7 +8,7 @@
         header("Location:perfilCliente.php");
     };
     $id = $_SESSION["idSessao"];
-    $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 3, $id));
+    $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 0, $id));
 
     $nome = $registro["nome"];
     $email = $registro["email"];
@@ -31,8 +31,7 @@
     <header>
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
-            <a class="bt cab" href="editarPerfil.php">Editar Perfil</a>
-            <a class="bt cab" href="formEnsaio.php">Criar ensaio</a>
+            <?php require_once "codigos/HTMLcabecalho.php";?>
             <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
         </nav>
     </header>

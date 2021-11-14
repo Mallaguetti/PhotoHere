@@ -8,7 +8,7 @@
     };
     
     $id = $_SESSION["idSessao"];
-    $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 3, $id));
+    $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 0, $id));
 
     $nome = $registro["nome"];
     $email = $registro["email"];

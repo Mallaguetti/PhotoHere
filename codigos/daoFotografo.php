@@ -23,14 +23,14 @@
 
     function pesquisarFotografo($conexao, $tipo, $texto){
         switch($tipo){
+            case 0:
+                $sql = "SELECT * FROM fotografo WHERE idFotografo = '$texto'";
+                break;
             case 1:
                 $sql = "SELECT * FROM fotografo WHERE nome LIKE '$texto%'";
                 break;
             case 2:
                 $sql = "SELECT * FROM fotografo WHERE CEP LIKE '$texto%'";
-                break;
-            case 3:
-                $sql = "SELECT * FROM fotografo WHERE idFotografo = '$texto'";
                 break;
         };
         $resultado = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));

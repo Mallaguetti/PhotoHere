@@ -3,7 +3,6 @@
     margin:0 0 .6rem;
 }
 .resultado{
-    outline:1px solid black;
     border-radius:.3rem;
     margin-top:.6rem;
     box-shadow:#00000066 .1rem .1rem .3rem;
@@ -13,7 +12,4 @@
 }
 .resultado img{
     height: 20Vh;
-}
-.resultado > .bt{
-    padding: .3rem;
 }

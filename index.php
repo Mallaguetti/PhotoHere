@@ -1,9 +1,3 @@
-<?php
-    require_once "codigos/validarSessao.php";
-    if ($sessaoExiste) {
-        header("Location:perfilCliente.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,8 +11,7 @@
     <header>
         <nav>
             <a class="bt cab"id="logo"href="index.php">PhotoHere</a>
-            <a class='bt cab'id='login'href='formLogin.php'>Login</a>
-            <a class='bt cab'href='formCadUsuario.php'>Cadastrar</a>
+            <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <main>
