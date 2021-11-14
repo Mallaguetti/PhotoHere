@@ -80,9 +80,10 @@ section{
 .flex{
     display:flex;
     flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
 }
-/*justif!@!y-content:center;
-    align-it!@!ems:center;*/
+/**/
 
 #s1{
     padding-top:10vh;
