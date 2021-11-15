@@ -19,7 +19,7 @@
     <header>
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
-            <a class="bt cab" href="#">Ver Ensaios</a>
+            <a class="bt cab" href="perfilClienteEnsaios.php">Ver Ensaios</a>
             <a class="bt cab" href="encontrarFotografo.php">Procurar Fotografo</a>
             <a class="bt cab" href="codigos/logout.php">Sair</a>
         </nav>

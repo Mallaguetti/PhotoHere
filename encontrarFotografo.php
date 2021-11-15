@@ -51,9 +51,9 @@
                     require_once 'codigos/conectar.php';
                     require_once 'codigos/daoFotografo.php';
 
-                    $resultado = pesquisarFotografo($conexao, $tipo, $texto);
+                    $res = pesquisarFotografo($conexao, $tipo, $texto);
 
-                    while ($registro = mysqli_fetch_assoc($resultado)) {
+                    while ($registro = mysqli_fetch_assoc($res)) {
                         $nome = $registro["nome"];
                         $apresentacao = $registro["apresentacao"];
                         $id = $registro["idFotografo"];

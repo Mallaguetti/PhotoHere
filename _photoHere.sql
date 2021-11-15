@@ -30,7 +30,7 @@ CREATE TABLE `fotografo` (
   PRIMARY KEY(idFotografo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `Ensaio` (
+CREATE TABLE `ensaio` (
   `idEnsaio` int(11) NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,

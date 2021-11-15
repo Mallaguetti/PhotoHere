@@ -15,7 +15,21 @@
     function loginCliente($conexao, $usuario, $senha){
         $sql = "SELECT * FROM cliente WHERE usuario = '$usuario' AND senha = '$senha'";
         $res =  mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
-        $registro = mysqli_fetch_assoc($res);
-        return $registro;
+        return mysqli_fetch_assoc($res);
+    };
+    function pesquisarCliente($conexao, $tipo, $texto){
+        switch($tipo){
+            case 0:
+                $sql = "SELECT * FROM cliente WHERE idCliente = '$texto'";
+                break;
+            case 1:
+                $sql = "SELECT * FROM cliente WHERE nome LIKE '$texto%'";
+                break;
+            case 2:
+                $sql = "SELECT * FROM cliente WHERE CEP LIKE '$texto%'";
+                break;
+        };
+        $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+        return $res;
     };
 ?>

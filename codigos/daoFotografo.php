@@ -17,8 +17,7 @@
     function loginFotografo($conexao, $usuario, $senha){
         $sql = "SELECT * FROM fotografo WHERE usuario = '$usuario' AND senha = '$senha'";
         $res =  mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
-        $registro = mysqli_fetch_assoc($res);
-        return $registro;
+        return mysqli_fetch_assoc($res);
     };
 
     function pesquisarFotografo($conexao, $tipo, $texto){
@@ -33,8 +32,8 @@
                 $sql = "SELECT * FROM fotografo WHERE CEP LIKE '$texto%'";
                 break;
         };
-        $resultado = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
-        return $resultado;
+        $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+        return $res;
     };
 
     function salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentacao){
