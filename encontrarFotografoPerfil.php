@@ -38,6 +38,9 @@
             <p>facebook: <?php echo $facebook?></p>
             <p>insta: <?php echo $instagram?></p>
         </div>
+        <div>
+            <a href="novoEnsaio.php?id=<?php echo $id?>">Marcar Ensaio</a>
+        </div>
     </section>
 </body>
 </html>

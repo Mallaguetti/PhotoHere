@@ -2,10 +2,15 @@ body{
     background-color:var(--claro);
 }
 form{
+    display: flex;
+    align-items: center;
     background-color:var(--cor2);
     padding:.6rem;
     border-radius:.3rem;
     box-shadow:#00000066 .1rem .1rem .3rem;
+}
+form > div{
+    text-align: center;
 }
 table{
     text-align:left;

@@ -32,7 +32,8 @@ CREATE TABLE `fotografo` (
 
 CREATE TABLE `Ensaio` (
   `idEnsaio` int(11) NOT NULL AUTO_INCREMENT,
-  `data` date NOT NULL,
+  `data` DATE NOT NULL,
+  `hora` TIME NOT NULL,
   `etapa` int(11) NOT NULL,
   `avaliacao`int(11),
   `cliente` int(11),

@@ -39,7 +39,10 @@
                         };
                     ?>
                     <tr>
-                        <td><input type="submit" name="btnEnviar" value="Entrar"></td>
+                        <td>
+                            <input type="submit" name="btnEnviar" value="Entrar">
+                            <a href="formCadUsuario.php">Cadastrar</a>
+                        </td>
                     </tr>
                 </table>
             </form>

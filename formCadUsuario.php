@@ -15,8 +15,8 @@
     <main>
         <section id="s1" class="flex">
             <form method="post" name="formUsuario" action="codigos/salvarUsuario.php" enctype="multipart/form-data">
-                <H2>Cadastro de Usúario</H2>
                 <table>
+                    <tr><th><H2>Cadastro de Usúario</H2></th></tr>
                     <tr>
                         <th>Eu sou:</th>
                     </tr>
@@ -63,7 +63,10 @@
                             };
                         ?>
                     <tr>
-                        <td><input type="submit" name="btnEnviar" value="Enviar"><input type="reset" name="btnLimpar" value="Limpar"></td>
+                        <td>
+                            <input type="submit" name="btnEnviar" value="Cadastrar">
+                            <a href="formLogin.php">Já tenho uma conta</a>
+                        </td>
                     </tr>
                 </table>
             </form>
