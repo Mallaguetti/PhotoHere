@@ -37,7 +37,7 @@
     </header>
     <main>
         <section id="s1" class="flex">
-            <form method="post" name="formLogin" action="codigos/salvarPerfil.php" enctype="multipart/form-data">
+            <form method="post" name="formLogin" action="codigos/editarUsuarioFotografo.php" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <table>
                     <tr>
