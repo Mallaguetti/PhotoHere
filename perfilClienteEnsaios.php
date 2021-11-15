@@ -2,7 +2,7 @@
     require_once "codigos/validarSessao.php";
     loginRequerido();
     if ($isFotografo){
-        header("Location:perfilFotografo.php");
+        header("Location:perfilFotografoEnsaios.php");
     };
 ?>
 <!DOCTYPE html>

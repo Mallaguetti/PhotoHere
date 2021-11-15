@@ -8,7 +8,19 @@
         $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         return $res;
     }
-    function avancarEtapa($conexao, $idEnsaio){
+    if(isset($_GET['msg'])){
+        require_once "conectar.php";
+        
+        $idEnsaio = $_GET['msg'];
         $registro = mysqli_fetch_assoc(pesquisarEnsaio($conexao, "idEnsaio", $idEnsaio));
-    };
+        
+        $etapa = $registro["etapa"]+1;
+        
+        $sql = "UPDATE ensaio SET 
+        etapa = '$etapa'
+        WHERE idEnsaio = $idEnsaio";
+
+        mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+        header("Location:../perfilClienteEnsaios.php");
+    }
 ?>

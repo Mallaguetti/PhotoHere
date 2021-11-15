@@ -29,6 +29,7 @@
 </head>
 <body>
     <header>
+        
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <a class="bt cab" href="perfilFotografoEditar.php">Editar Perfil</a>
@@ -48,6 +49,7 @@
                     $res = pesquisarEnsaio($conexao, "fotografo", $_SESSION["idSessao"]);
 
                     while ($registro = mysqli_fetch_assoc($res)) {
+                        $idEnsaio = $registro["idEnsaio"];
                         $data = $registro["data"];
                         $hora = $registro["hora"];
                         $etapa = $registro["etapa"];
@@ -61,6 +63,7 @@
                                 $status = "Confirmação pendente";
                                 break;
                             case 1:
+                                $status = "Aguardando fotos";
                                 break;
                             case 2:
                                 break;
@@ -90,7 +93,7 @@
                                         <td></td>
                                         <td></td>
                                         <td rowspan='2'><a href=''>Cancelar</a></td>
-                                        <td rowspan='2'><a href=''>Confirmar</a></td>
+                                        <td rowspan='2'><a href='codigos/daoEnsaio.php?msg=$idEnsaio'>Confirmar</a></td>
                                     </tr>
                                 </tfoot>
                             </table>
