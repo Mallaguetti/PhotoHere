@@ -29,6 +29,10 @@
                         <td><input type="text" name="txtSenha" size="40" required=""></td>
                     </tr>
                     <?php
+                        if (isset($_GET["pag"])){
+                            $pag = $_GET["pag"];
+                            echo "<input type='hidden' name='pag' value='$pag'>";
+                        }
                         if(isset($_GET["msg"])){
                             $msg=$_GET["msg"];
                             echo "<tr><td>$msg</td></tr>";

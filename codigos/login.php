@@ -7,6 +7,7 @@
 
     $usuario = $_POST["txtLogin"];
     $senha = $_POST["txtSenha"];
+    $pag = $_POST["pag"];
 
     if (isset($_SESSION["usuarioSessao"])){
         $usuario = $_SESSION["usuarioSessao"];
@@ -22,7 +23,11 @@
             $_SESSION["idSessao"] = $id;
             $_SESSION["isFotografo"] = false;
 
-            header("Location:../perfilCliente.php");
+            if(isset($_POST["pag"])){
+                header("Location:../$pag");
+            }else{
+                header("Location:../perfilFotografo.php");
+            }
         } else {
             header("Location:../formLogin.php?msg=Senha incorreta");
         }
@@ -34,7 +39,12 @@
             $_SESSION["idSessao"] = $id;
             $_SESSION["isFotografo"] = true;
 
-            header("Location:../perfilFotografo.php");
+            if(isset($_POST["pag"])){
+                $pag = $_POST["pag"];
+                header("Location:../$pag");
+            }else{
+                header("Location:../perfilFotografo.php");
+            }
         } else {
             header("Location:../formLogin.php?msg=Senha incorreta");
         }
