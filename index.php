@@ -1,3 +1,9 @@
+<?php
+    require_once "codigos/validarSessao.php";
+    if ($sessaoExiste) {
+        header("Location:perfilCliente.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
