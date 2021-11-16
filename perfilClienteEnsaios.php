@@ -48,8 +48,10 @@
                                 $status = "Aguardando confirmação";
                                 break;
                             case 1:
+                                $status = "Aguardando confirmação";
                                 break;
                             case 2:
+                                $status;
                                 break;
                         }
                         echo "
