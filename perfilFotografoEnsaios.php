@@ -2,9 +2,8 @@
     require_once "codigos/conectar.php";
     require_once "codigos/validarSessao.php";
     require_once "codigos/daoFotografo.php";
-    loginRequerido();
-    if (!$isFotografo){
-        header("Location:perfilCliente.php");
+    if (!$_SESSION["isFotografo"];){
+        header("Location:perfilClienteEnsaios.php");
     };
     
     $id = $_SESSION["idSessao"];

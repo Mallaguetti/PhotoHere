@@ -1,12 +1,10 @@
 <?php
     require_once "codigos/conectar.php";
-    require_once "codigos/validarSessao.php";
     require_once "codigos/daoFotografo.php";
-    loginRequerido();
-    if (!$isFotografo){
+    require_once "codigos/validarSessao.php";
+    if (!$_SESSION["isFotografo"){
         header("Location:perfilCliente.php");
     };
-    
     $id = $_SESSION["idSessao"];
     $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 0, $id));
 
