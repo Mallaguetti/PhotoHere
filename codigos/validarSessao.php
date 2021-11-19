@@ -9,7 +9,8 @@
     };
     function loginRequerido(){
         if (!isset($_SESSION["idSessao"])){
-            header("Location:formLogin.php");
+            $pag = basename($_SERVER['PHP_SELF'],'.php');
+            header("Location:formLogin.php?pag=$pag.php");
         };
     };
 ?>

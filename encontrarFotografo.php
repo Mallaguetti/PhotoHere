@@ -1,9 +1,3 @@
-<?php
-    if (isset($_POST["idFotografo"])){
-        $id=$_POST["idFotografo"];
-        header("Location:encontrarFotografoPerfil.php?idFotografo=$id" );
-    };
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,7 +52,7 @@
                         $apresentacao = $registro["apresentacao"];
                         $id = $registro["idFotografo"];
                         echo "
-                        <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
+                        <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografoPerfil.php?idFotografo=$id' enctype='multipart/form-dat'>
                             <table>
                                 <tr>
                                     <td><img src='imagens/perfil.jpg' alt=''></td>
