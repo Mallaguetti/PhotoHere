@@ -1,8 +1,9 @@
 <?php
     require_once "codigos/validarSessao.php";
+    loginRequerido();
     if (isset($_GET["id"])){
-        $idFotografo = $_GET["id"];
         $idCliente = $_SESSION["idSessao"];
+        $idFotografo = $_GET["id"];
     } else {
         header("Location:encontrarFotografo.php");
     }
