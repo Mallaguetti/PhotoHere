@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    if ($isset($_SESSION["idSessao"])) {
+    require_once "codigos/validarSessao.php";
+    if ($sessaoExiste) {
         header("Location:perfilCliente.php");
     }
 ?>

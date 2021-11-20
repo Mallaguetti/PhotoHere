@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    if ($isset($_SESSION["idSessao"])) {
-        header("Location:perfilCliente.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
