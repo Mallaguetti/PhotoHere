@@ -11,7 +11,6 @@
     $registro = mysqli_fetch_assoc(pesquisarFotografo($conexao, 0, $id));
 
     $nome = $registro["nome"];
-    $sobreNome = $registro["sobreNome"];
     $email = $registro["email"];
     $cep = $registro["cep"];
     $apresentacao = $registro["apresentacao"];
@@ -42,52 +41,34 @@
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <table>
                     <tr>
-                        <th> Nome: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="nome" size="40" value="<?php echo $nome?>"></td>
-                    </tr>
-                    <tr>
-                        <th> Sobrenome: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="sobreNome" size="40" value="<?php echo $sobreNome?>"></td>
-                    </tr>
-                    <tr>
-                        <th> Email: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="email" size="40" value="<?php echo $email?>"></td>
-                    </tr>
-                    <tr>
                         <th> Cep: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="cep" size="40" value="<?php echo $cep?>"></td>
+                        <td><input type="text" name="cep" size="40" value="<?php echo $cep?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Instagram: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="instagram" size="40" value="<?php echo $instagram?>"></td>
+                        <td><input type="text" name="instagram" size="40" value="<?php echo $instagram?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Facebook: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="facebook" size="40" value="<?php echo $facebook?>"></td>
+                        <td><input type="text" name="facebook" size="40" value="<?php echo $facebook?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Celular: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="celular" size="40" value="<?php echo $celular?>"></td>
+                        <td><input type="text" name="celular" size="40" value="<?php echo $celular?>" required=""></td>
                     </tr>
                     <tr>
                         <th> Apresentação breve: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="apresentacao" size="40" value="<?php echo $apresentacao?>"></td>
+                        <td><input type="text" name="apresentacao" size="40" value="<?php echo $apresentacao?>" required=""></td>
                     </tr>
                     <?php
                         if(isset($_GET["msg"])){

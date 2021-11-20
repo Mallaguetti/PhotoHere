@@ -92,8 +92,8 @@
                                     <tr>
                                         <td></td>
                                         <td></td>
-                                        <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=0&id=$idEnsaio'>Cancelar</a></td>
-                                        <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>Confirmar</a></td>
+                                        <td rowspan='2'><a href=''>Cancelar</a></td>
+                                        <td rowspan='2'><a href='codigos/daoEnsaio.php?msg=$idEnsaio'>Confirmar</a></td>
                                     </tr>
                                 </tfoot>
                             </table>
