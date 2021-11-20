@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (isset($_SESSION["idSessao"])) {
+    if ($isset($_SESSION["idSessao"])) {
         header("Location:perfilCliente.php");
     }
 ?>
@@ -24,7 +24,7 @@
         <section class="flex"id="s1">
             <div id="d1" class="flex">
                 <h1>Seu site de fotografos</h1>
-                <a class="bt" href="encontrarFotografo.php"><img src="imagens/LOGO.jpg" alt=""></a>
+                <a class="bt" href="encontrarFotografo.php">Encontrar Fotografos</a>
             </div>
         </section>
         <section class="flex" id="s2">

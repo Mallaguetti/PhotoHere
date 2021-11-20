@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (isset($_SESSION["idSessao"])) {
+    if ($isset($_SESSION["idSessao"])) {
         header("Location:perfilCliente.php");
     }
 ?>
