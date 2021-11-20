@@ -36,9 +36,12 @@
         return $res;
     };
 
-    function salvarPerfil($conexao, $id, $cep, $instagram, $facebook, $celular, $apresentacao){
+    function salvarPerfil($conexao, $id, $nome, $sobreNome, $email, $cep, $instagram, $facebook, $celular, $apresentacao){
         
         $sql = "UPDATE fotografo SET 
+        nome = '$nome',
+        sobreNome = '$sobreNome',
+        email = '$email',
         cep = '$cep',
         instagram = '$instagram',
         facebook = '$facebook',
