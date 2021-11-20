@@ -1,7 +1,6 @@
 <?php
     require_once "codigos/validarSessao.php";
-    loginRequerido();
-    if ($isFotografo){
+    if ($_SESSION["isFotografo"]){
         header("Location:perfilFotografoEnsaios.php");
     };
 ?>
