@@ -36,7 +36,7 @@
         return $res;
     };
 
-    function salvarPerfil($conexao, $id, $nome, $sobreNome, $email, $cep, $instagram, $facebook, $celular, $apresentacao){
+    function editarFotografo($conexao, $id, $nome, $sobreNome, $email, $cep, $instagram, $facebook, $celular, $apresentacao){
         
         $sql = "UPDATE fotografo SET 
         nome = '$nome',
@@ -48,6 +48,11 @@
         celular = '$celular',
         apresentacao = '$apresentacao'
         WHERE idFotografo = $id";
+
+        mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+    };
+    function altFotoFotografo($conexao, $id, $foto){
+        $sql = "UPDATE fotografo SET fotoPerfil = '$foto' WHERE idFotografo = $id";
 
         mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
     };

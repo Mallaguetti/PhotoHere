@@ -27,7 +27,7 @@
                                 <option value="2">CEP</option>
                             </select>
                         </td>
-                        <td><input type="text" name="texto" size="40" required=""></td>
+                        <td><input type="text" name="texto" size="40"></td>
                         <td><input type="submit" name="btnPesquisar" value="Pesquisar"></td>
                     </tr>
                 </table>
