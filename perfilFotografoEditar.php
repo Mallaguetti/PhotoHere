@@ -18,6 +18,9 @@
     $instagram = $registro["instagram"];
     $facebook = $registro["facebook"];
     $celular = $registro["celular"];
+
+    $foto = $registro["fotoPerfil"];
+    $fotoPerfil = base64_encode($foto);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,7 +36,7 @@
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <?php require_once "codigos/HTMLcabecalho.php";?>
-            <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
+            <a href="formLogin.php"><img src="<?php echo ("data:imagem/IMG_JPG;base64,$fotoPerfil")?>" alt=""></a>
         </nav>
     </header>
     <main>

@@ -51,11 +51,14 @@
                         $nome = $registro["nome"];
                         $apresentacao = $registro["apresentacao"];
                         $id = $registro["idFotografo"];
+
+                        $foto = $registro["fotoPerfil"];
+                        $fotoPerfil = base64_encode($foto);
                         echo "
                         <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografoPerfil.php?idFotografo=$id' enctype='multipart/form-dat'>
                             <table>
                                 <tr>
-                                    <td><img src='imagens/perfil.jpg' alt=''></td>
+                                    <td><img src='data:imagem/IMG_JPG;base64,$fotoPerfil' alt=''></td>
                                     <td><h2>$nome</h2><p>$apresentacao</p></td>
                                 </tr>
                             </table>

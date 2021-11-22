@@ -39,7 +39,7 @@
             }
         }
     }
-    if (isset($msg)){
+    if ($msg != null){
         header("Location:../perfilFotografoEditar.php?msg=$msg");
     }
 

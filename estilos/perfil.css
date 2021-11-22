@@ -17,5 +17,6 @@ a > img{
     padding: 0 0 .6rem .6rem;
 }
 #s1{
+    display: flex;
     padding-top:15vh;
 }

@@ -17,6 +17,9 @@
     $instagram = $registro["instagram"];
     $facebook = $registro["facebook"];
     $celular = $registro["celular"];
+
+    $foto = $registro["fotoPerfil"];
+    $fotoPerfil = base64_encode($foto);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,7 +38,7 @@
             <a class="bt cab" href="perfilFotografoEditar.php">Editar Perfil</a>
             <a class="bt cab" href="formEnsaio.php">Criar ensaio</a>
             <a class="bt cab" href="codigos/logout.php">Sair</a>
-            <a href="formLogin.php"><img src="imagens/perfil.jpg" alt=""></a>
+            <a href="formLogin.php"><img src="<?php echo ("data:imagem/IMG_JPG;base64,$fotoPerfil")?>" alt=""></a>
         </nav>
     </header>
     <main>
