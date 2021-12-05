@@ -13,8 +13,11 @@ a > img{
     flex-wrap:nowrap;
 }
 #nome{
-
     padding: 0 0 .6rem .6rem;
+}
+#dados {
+    padding: 0 .6rem 0 0;
+    min-width: 15vw;
 }
 #s1{
     display: flex;

@@ -32,7 +32,6 @@
 </head>
 <body>
     <header>
-        
         <nav>
             <a class="bt"id="logo"href="index.php">PhotoHere</a>
             <a class="bt cab" href="perfilFotografoEditar.php">Editar Perfil</a>

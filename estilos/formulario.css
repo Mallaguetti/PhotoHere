@@ -4,10 +4,13 @@ body{
 form{
     display: flex;
     align-items: center;
-    background-color:var(--cor2);
     padding:.6rem;
-    border-radius:.3rem;
+    
+}
+.form{
+    background-color:var(--cor2);
     box-shadow:#00000066 .1rem .1rem .3rem;
+    border-radius:.3rem;
 }
 form > div{
     text-align: center;

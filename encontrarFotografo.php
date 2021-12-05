@@ -18,20 +18,22 @@
     </header>
     <main>
         <section class="flex topo"id="s1">
-            <form method="POST" action="encontrarFotografo.php">
-                <table>
-                    <tr>
-                        <td>
-                            <select name="pesquisa">
-                                <option value="1">Nome</option>
-                                <option value="2">CEP</option>
-                            </select>
-                        </td>
-                        <td><input type="text" name="texto" size="40"></td>
-                        <td><input type="submit" name="btnPesquisar" value="Pesquisar"></td>
-                    </tr>
-                </table>
-            </form>
+            <div class="form">
+                <form method="POST" action="encontrarFotografo.php">
+                    <table>
+                        <tr>
+                            <td>
+                                <select name="pesquisa">
+                                    <option value="1">Nome</option>
+                                    <option value="2">CEP</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="texto" size="40"></td>
+                            <td><input type="submit" name="btnPesquisar" value="Pesquisar"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
             <div class="pesquisa">         
                 <?php
                     $tipo = 1;
@@ -55,16 +57,18 @@
                         $foto = $registro["fotoPerfil"];
                         $fotoPerfil = base64_encode($foto);
                         echo "
-                        <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografoPerfil.php?idFotografo=$id' enctype='multipart/form-dat'>
-                            <table>
-                                <tr>
-                                    <td><img src='data:imagem/IMG_JPG;base64,$fotoPerfil' alt=''></td>
-                                    <td><h2>$nome</h2><p>$apresentacao</p></td>
-                                </tr>
-                            </table>
-                            <input type='hidden' name='idFotografo' value='$id'>
-                            <input type='submit' name='btnEnviar' value='Ver Perfil'>
+                        <div class='form'>
+                            <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografoPerfil.php?idFotografo=$id' enctype='multipart/form-dat'>
+                                <table>
+                                    <tr>
+                                        <td><img src='data:imagem/IMG_JPG;base64,$fotoPerfil' alt=''></td>
+                                        <td><h2>$nome</h2><p>$apresentacao</p></td>
+                                    </tr>
+                                </table>
+                                <input type='hidden' name='idFotografo' value='$id'>
+                                <input type='submit' name='btnEnviar' value='Ver Perfil'>
                             </form>
+                        </div>
                         ";
                     }
                 ?>
