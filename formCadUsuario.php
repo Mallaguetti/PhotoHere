@@ -49,13 +49,13 @@
                             <th>Senha: </th>
                         </tr>
                         <tr>
-                            <td><input type="text" name="senha1" size="40" required=""></td>
+                            <td><input type="password" name="senha1" size="40" required=""></td>
                         </tr>
                         <tr>
                             <th>Repita a Senha: </th>
                         </tr>
                         <tr>
-                            <td><input type="text" name="senha2" size="40" required=""></td>
+                            <td><input type="password" name="senha2" size="40" required=""></td>
                         </tr>
                             <?php
                                 if(isset($_GET["msg"])){

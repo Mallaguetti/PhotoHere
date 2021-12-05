@@ -27,7 +27,7 @@
                             <th> Senha: </th>
                         </tr>
                         <tr>
-                            <td><input type="text" name="txtSenha" size="40" required=""></td>
+                            <td><input type="password" name="txtSenha" size="40" required=""></td>
                         </tr>
                         <?php
                             if (isset($_GET["pag"])){

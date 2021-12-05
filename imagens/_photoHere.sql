@@ -11,6 +11,8 @@ CREATE TABLE `cliente` (
   `sobreNome` varchar(45) NOT NULL,
   `usuario` varchar(20) NOT NULL,
   `senha` varchar(20) NOT NULL,
+  `fotoPerfil` mediumblob,
+  `celular` varchar(30),
   `email` varchar(45) NOT NULL,
   PRIMARY KEY(idCliente)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

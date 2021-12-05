@@ -45,12 +45,6 @@
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <table>
                     <tr>
-                        <th> Foto de perfil: </th>
-                    </tr>
-                    <tr>
-                        <td><input type="file" name="fotoPerfil"></td>
-                    </tr>
-                    <tr>
                         <th> Nome: </th>
                     </tr>
                     <tr>

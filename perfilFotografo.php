@@ -48,7 +48,7 @@
                 <div class="flex cabecalho">
                     <?php
                     if ($foto != null) {
-                        echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='('data:imagem/IMG_JPG;base64,$fotoPerfil')'></a>");
+                        echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='data:imagem/IMG_JPG;base64,$fotoPerfil'></a>");
                     } else {
                         echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='imagens/perfil.jpg'></a>");
                     }
@@ -57,16 +57,19 @@
                 <?php
                     if ($msg == "editarFoto"){
                         echo ("
-                            <form method='post' name='formLogin' action='codigos/editarUsuarioFotografo.php' enctype='multipart/form-data'>
+                            <form method='post' name='formFotoPerfil' action='codigos/editarFotoPerfil.php' enctype='multipart/form-data'>
+                                <input type='hidden' name='id' value='$id'>
                                 <input type='file' name='fotoPerfil'>
+                                <input type='submit' name='btnEnviar' value='Salvar Foto'>
+                                <a href='perfilFotografo.php'>Cancelar</a>
                             </form>
                         ");
                     };
-                    ?>
+                ?>
                 <div id="nome">
                         <h1><?php echo $nome?></h1>
                         <p><?php echo $apresentacao?></p>
-                    </div>
+                </div>
                 <div>
                     <h2>Meus dados</h2>
                     <p>nuemro: <?php echo $celular?></p>
@@ -76,93 +79,89 @@
                 </div>
             </div>
             <div>
-                <div>
-                    <h2>Ensaios marcados</h2>
-                    <div class="pesquisa">         
-                        <?php
-                            require_once 'codigos/conectar.php';
-                            require_once 'codigos/daoEnsaio.php';
-                            require_once 'codigos/daoCliente.php';
+                <h2>Ensaios marcados</h2>
+                <div class="pesquisa">         
+                    <?php
+                        require_once 'codigos/conectar.php';
+                        require_once 'codigos/daoEnsaio.php';
+                        require_once 'codigos/daoCliente.php';
 
-                            $res = pesquisarEnsaio($conexao, "fotografo", $_SESSION["idSessao"]);
-                            if (mysqli_fetch_assoc($res) == null){
+                        $res = pesquisarEnsaio($conexao, "fotografo", $_SESSION["idSessao"]);
+                        if (mysqli_fetch_assoc($res) == null){
+                            echo "
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sem ensaios no momento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            ";
+                        }else{
+                            while ($registro = mysqli_fetch_assoc($res)) {
+                                $idEnsaio = $registro["idEnsaio"];
+                                $data = $registro["data"];
+                                $hora = $registro["hora"];
+                                $etapa = $registro["etapa"];
+                                $cliente = $registro["cliente"];
+                                
+                                $resCliente = mysqli_fetch_assoc(pesquisarCliente($conexao,0,$cliente));
+                                $nomeCliente = $resCliente["nome"];
+
+                                switch ($etapa){
+                                    case 0:
+                                        $status = "Confirmação pendente";
+                                        break;
+                                    case 1:
+                                        $status = "Aguardando fotos";
+                                        break;
+                                    case 2:
+                                        break;
+                                }
                                 echo "
+                                <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Sem ensaios no momento</th>
+                                                <th>Ensaio com $nomeCliente</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td>Data: $data</td>
+                                                <td rowspan='3'>Status: $status</td>
                                             </tr>
                                             <tr>
+                                                <td>Hora: $hora</td>
                                             </tr>
                                             <tr>
+                                                <td>Local: </td>
                                             </tr>
                                         </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=0&id=$idEnsaio'>Cancelar</a></td>
+                                                <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>Confirmar</a></td>
+                                            </tr>
+                                        </tfoot>
                                     </table>
-                                ";
-                            }else{
-                                while ($registro = mysqli_fetch_assoc($res)) {
-                                    $idEnsaio = $registro["idEnsaio"];
-                                    $data = $registro["data"];
-                                    $hora = $registro["hora"];
-                                    $etapa = $registro["etapa"];
-                                    $cliente = $registro["cliente"];
+                                    <input type='hidden' name='idFotografo' value=''>
                                     
-                                    $resCliente = mysqli_fetch_assoc(pesquisarCliente($conexao,0,$cliente));
-                                    $nomeCliente = $resCliente["nome"];
-
-                                    switch ($etapa){
-                                        case 0:
-                                            $status = "Confirmação pendente";
-                                            break;
-                                        case 1:
-                                            $status = "Aguardando fotos";
-                                            break;
-                                        case 2:
-                                            break;
-                                    }
-                                    echo "
-                                    <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Ensaio com $nomeCliente</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Data: $data</td>
-                                                    <td rowspan='3'>Status: $status</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Hora: $hora</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Local: </td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=0&id=$idEnsaio'>Cancelar</a></td>
-                                                    <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>Confirmar</a></td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                        <input type='hidden' name='idFotografo' value=''>
-                                        
-                                        </form>
-                                    ";
-                                }
+                                    </form>
+                                ";
                             }
-                        ?>
-                    </div>
-                <div>
-                    <h2>Meus albuns</h2>
+                        }
+                    ?>
                 </div>
             </div>
         </section>
