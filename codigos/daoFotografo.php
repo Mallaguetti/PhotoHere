@@ -56,4 +56,9 @@
 
         mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
     };
+    function fotoFotografo($conexao, $id){
+        $sql = "SELECT fotoPerfil FROM fotografo WHERE idFotografo = '$id'";
+        $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+        return $res;
+    };
 ?>

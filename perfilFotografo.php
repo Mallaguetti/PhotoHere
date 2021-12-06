@@ -38,7 +38,7 @@
 <body>
     <header>
         <nav>
-        <?php require_once "codigos/HTMLcabecalho.php";?>
+            <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <main>

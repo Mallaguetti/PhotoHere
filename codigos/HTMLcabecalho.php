@@ -3,10 +3,19 @@ require_once "codigos/validarSessao.php";
 echo "<a class='bt cab'id='logo'href='index.php'><img src='imagens/LOGO.jpg' alt='PhotoHere'></a>";
 if($sessaoExiste){
     if($isFotografo){
+        if (!(isset($fotoPerfil))){
+            require_once "codigos/conectar.php";
+            require_once "codigos/validarSessao.php";
+            require_once "codigos/daoFotografo.php";
+            $id = $_SESSION["idSessao"];
+            $registro = mysqli_fetch_assoc(fotoFotografo($conexao, $id));
+            $foto = $registro["fotoPerfil"];
+            $fotoPerfil = base64_encode($foto);
+        }
         if ($foto != null) {
-            echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='data:imagem/IMG_JPG;base64,$fotoPerfil'></a>");
+            echo ("<a id='perfil' href='perfilFotografo.php'><img src='data:imagem/IMG_JPG;base64,$fotoPerfil'></a>");
         } else {
-            echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='imagens/perfil.jpg'></a>");
+            echo ("<a id='perfil' href='perfilFotografo.php'><img src='imagens/perfil.jpg'></a>");
         }
     } else {
         echo "<a class='bt cab' href='encontrarFotografo.php'>Procurar Fotografo</a>";

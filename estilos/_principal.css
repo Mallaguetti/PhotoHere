@@ -39,6 +39,10 @@ header{
 header > nav{
     height:62.5%;
 }
+nav > a > img{
+    height: 100%;
+    border-radius: 20%;
+}
 #logo{
     margin-right:auto;
     font-size:min(1.8em,6vh);
@@ -65,7 +69,7 @@ nav{
     align-items:center;
 }
 .cab{
-    margin-right:.6rem;
+    margin-left:.6rem;
     padding:0 .3rem;
 }
 .bt:hover{

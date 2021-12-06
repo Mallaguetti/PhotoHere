@@ -39,7 +39,18 @@
             <p>insta: <?php echo $instagram?></p>
         </div>
         <div>
-            <a href="novoEnsaio.php?id=<?php echo $id?>">Marcar Ensaio</a>
+        <?php
+            require_once "codigos/validarSessao.php";
+            if ($sessaoExiste) {
+                if(!$isFotografo){
+                    echo "<a href='novoEnsaio.php?id=$id'>Marcar Ensaio</a>";
+                } else {
+                    echo "Apenas clientes podem marcar ensaio";
+                };
+            } else{
+                echo "Faça login para marcar ensaio";
+            };
+        ?>
         </div>
     </section>
 </body>
