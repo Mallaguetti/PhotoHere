@@ -20,6 +20,7 @@
 <head>
     <title>PhotoHere</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/perfil.css">
     <link rel="stylesheet" type="text/css" href="estilos/individuais/perfilCliente.css">
@@ -27,8 +28,7 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.php">PhotoHere</a>
-            <?php require_once "codigos/HTMLcabecalho.php";?>
+        <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <section class="flex topo"id="s1">

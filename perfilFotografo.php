@@ -30,6 +30,7 @@
 <head>
     <title>Meu Perfil</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/perfil.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
@@ -37,9 +38,7 @@
 <body>
     <header>
         <nav>
-            <a class="bt"id="logo"href="index.php">PhotoHere</a>
-            <a class="bt cab" href="perfilFotografoEditar.php">Editar Perfil</a>
-            <a class="bt cab" href="codigos/logout.php">Sair</a>
+        <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <main>

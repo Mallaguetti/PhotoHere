@@ -42,6 +42,10 @@ header > nav{
 #logo{
     margin-right:auto;
     font-size:min(1.8em,6vh);
+    background-color: white;
+}
+#logo > img{
+    height: 100%;
 }
 /*Estilos Botões*/
 nav{

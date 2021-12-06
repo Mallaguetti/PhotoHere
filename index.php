@@ -9,6 +9,7 @@
 <head>
     <title>PhotoHere</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
     <link type="text/js" href="estilos/rola.js">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/individuais/index.css">
@@ -18,8 +19,7 @@
 <body>
     <header id="nav" style="background-color: #00000000">
         <nav>
-            <a class="bt cab"id="logo"href="index.php">PhotoHere</a>
-            <?php require_once "codigos/HTMLcabecalho.php";?>
+        <?php require_once "codigos/HTMLcabecalho.php";?>
         </nav>
     </header>
     <main>
