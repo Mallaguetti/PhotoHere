@@ -13,11 +13,6 @@
     $apresentacao = $_POST["apresentacao"];
 
 
-    $extencao = strtolower(substr($_FILES['arquivo']['name'],-4));
-    $novoNome = md5(time()).$extencao;
-    $diretorio = 'imagens/';
-
-    move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novoNome);
 
     editarFotografo($conexao, $id, $nome, $sobreNome, $email, $cep, $instagram, $facebook, $celular, $apresentacao);
     

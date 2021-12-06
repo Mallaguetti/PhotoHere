@@ -41,35 +41,37 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex">
-            <div class="flex cabecalho">
-                <?php
-                if ($foto != null) {
-                    echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='data:imagem/IMG_JPG;base64,$fotoPerfil'></a>");
-                } else {
-                    echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='imagens/perfil.jpg'></a>");
-                }
-                ?>
-            </div>
-                <?php
-                    if ($msg == "editarFoto"){
-                        echo ("
-                            <form method='post' name='formFotoPerfil' action='codigos/editarFotoPerfil.php' enctype='multipart/form-data'>
-                                <input type='hidden' name='id' value='$id'>
-                                <input type='file' name='fotoPerfil'>
-                                <input type='submit' name='btnEnviar' value='Salvar Foto'>
-                                <a href='perfilFotografo.php'>Cancelar</a>
-                            </form>
-                        ");
-                    };
-                ?>
-            <div id="nome">
-                    <h1><?php echo $nome?></h1>
+        <section id="s1">
+            <div id="dados">
+                <div class="flex cabecalho">
+                    <?php
+                    if ($foto != null) {
+                        echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='data:imagem/IMG_JPG;base64,$fotoPerfil'></a>");
+                    } else {
+                        echo ("<a id='fotoPerfil' href='perfilFotografo.php?msg=editarFoto'><img src='imagens/perfil.jpg'></a>");
+                    }
+                    ?>
                 </div>
-            <div>
-                <h2>Meus dados</h2>
-                <p>nuemro: <?php echo $celular?></p>
-                <p>email: <?php echo $email?></p>
+                    <?php
+                        if ($msg == "editarFoto"){
+                            echo ("
+                                <form method='post' name='formFotoPerfil' action='codigos/editarFotoPerfil.php' enctype='multipart/form-data'>
+                                    <input type='hidden' name='id' value='$id'>
+                                    <input type='file' name='fotoPerfil'>
+                                    <input type='submit' name='btnEnviar' value='Salvar Foto'>
+                                    <a href='perfilFotografo.php'>Cancelar</a>
+                                </form>
+                            ");
+                        };
+                    ?>
+                <div id="nome">
+                        <h1><?php echo $nome?></h1>
+                    </div>
+                <div>
+                    <h2>Meus dados</h2>
+                    <p>nuemro: <?php echo $celular?></p>
+                    <p>email: <?php echo $email?></p>
+                </div>
             </div>
             <div>
                 <h2>Ensaios marcados</h2>

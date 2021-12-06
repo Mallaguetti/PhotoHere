@@ -20,7 +20,7 @@ if(isset($_GET['msg'])){
             WHERE idEnsaio = $idEnsaio";
 
             mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
-            header("Location:../perfilClienteEnsaios.php");
+            header("Location:../perfilCliente.php");
             break;
     }
 } else {

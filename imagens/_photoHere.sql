@@ -38,10 +38,19 @@ CREATE TABLE `ensaio` (
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,
   `etapa` int(11) NOT NULL,
+  `diretorio` VARCHAR(55),
   `avaliacao`int(11),
   `cliente` int(11),
   `fotografo` int(11),
   PRIMARY KEY(idEnsaio),
   FOREIGN KEY(cliente) REFERENCES cliente(idCliente),
   FOREIGN KEY(fotografo) REFERENCES fotografo(idFotografo)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `foto`(
+  `idFoto` int(11) NOT NULL AUTO_INCREMENT,
+  `arquivo` VARCHAR(40),
+  `idEnsaio` int(11),
+  PRIMARY KEY (idFoto),
+  FOREIGN KEY (idEnsaio) REFERENCES ensaio(idEnsaio)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

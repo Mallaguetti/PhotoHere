@@ -25,8 +25,8 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex">
-            <div class="pesquisa">         
+        <section id="s1">
+            <div class="dados">         
                 <?php
                     require_once 'codigos/conectar.php';
                     require_once 'codigos/daoEnsaio.php';
