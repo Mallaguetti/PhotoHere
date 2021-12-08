@@ -47,6 +47,7 @@
     </header>
     <main>
         <section id="s1" class="flex">
+            
             <h1>Upload de arquivos</h1>
             <form action="codigos/upload.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo($id)?>">
