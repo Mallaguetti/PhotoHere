@@ -5,7 +5,6 @@ form{
     display: flex;
     align-items: center;
     padding:.6rem;
-    
 }
 .form{
     background-color:var(--cor2);
@@ -18,6 +17,7 @@ form > div{
 table{
     text-align:left;
 }
+
 input{
     margin:.3rem;
     padding:.6rem;

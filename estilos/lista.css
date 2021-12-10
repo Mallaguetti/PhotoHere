@@ -1,0 +1,17 @@
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    padding:.3rem;
+    margin:.3rem;
+    border-radius:.3rem;
+    background-color: lightgray;
+    height: 20vh;
+    width: 20vh;
+}
+.item > img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}

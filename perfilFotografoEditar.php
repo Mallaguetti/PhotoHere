@@ -40,7 +40,7 @@
     </header>
     <main>
         <section id="s1" class="flex">
-            <form method="post" name="formLogin" action="codigos/editarUsuarioFotografo.php" enctype="multipart/form-data">
+            <form class="form" method="post" name="formLogin" action="codigos/editarUsuarioFotografo.php" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $id?>">
                 <table>
                     <tr>
@@ -89,14 +89,8 @@
                         <th> Apresentação breve: </th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="apresentacao" size="40" value="<?php echo $apresentacao?>"></td>
+                        <td><textarea type="tex" name="apresentacao"  rows="4" cols="46"><?php echo $apresentacao?></textarea></td>
                     </tr>
-                    <?php
-                        if(isset($_GET["msg"])){
-                            $msg=$_GET["msg"];
-                            echo "<tr><td>$msg</td></tr>";
-                        };
-                    ?>
                     <tr>
                         <td>
                             <input type="submit" name="btnEnviar" value="Salvar Perfil">

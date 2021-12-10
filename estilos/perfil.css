@@ -8,12 +8,29 @@
     align-items:flex-end;
     flex-wrap:nowrap;
 }
+.ensaio{
+    background-color: white;
+    margin-top:.6rem;
+    border-radius:.3rem;
+}
+#s1{
+    align-items: flex-start;
+    justify-content: center;
+}
 #nome{
     padding: 0 0 .6rem .6rem;
 }
+#conteudo{
+    background-color: lightgray;
+    border-radius: .3rem;
+    padding:.6rem;
+}
 #dados {
-    padding: 0 .6rem 0 0;
-    min-width: 15vw;
+    background-color: var(--cor2);
+    border-radius: .3rem;
+    margin:0 .3rem 0 0;
+    padding:.6rem;
+    min-width:15vw;
 }
 #s1{
     display: flex;

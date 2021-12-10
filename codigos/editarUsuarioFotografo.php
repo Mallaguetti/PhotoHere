@@ -16,5 +16,5 @@
 
     editarFotografo($conexao, $id, $nome, $sobreNome, $email, $cep, $instagram, $facebook, $celular, $apresentacao);
     
-    header("Location:../perfilFotografoEditar.php?msg=Perfil salvo com sucesso");
+    header("Location:../perfilFotografo.php");
 ?>

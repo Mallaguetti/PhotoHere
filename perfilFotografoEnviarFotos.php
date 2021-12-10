@@ -2,11 +2,16 @@
     require_once "codigos/conectar.php";
     require_once "codigos/validarSessao.php";
     require_once "codigos/daoFotografo.php";
+    require_once 'codigos/daoFoto.php';
 
     loginRequerido();
     if (!$isFotografo){
         header("Location:perfilCliente.php");
     };
+    if (isset($_GET["remov"])){
+        $idFoto = $_GET["remov"];
+        excluirFoto($conexao, $idFoto);
+    }
     if (isset($_GET["idEnsaio"])){
         $id = $_GET["idEnsaio"];
     } else {
@@ -37,6 +42,7 @@
     <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/perfil.css">
+    <link rel="stylesheet" type="text/css" href="estilos/lista.css">
     <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
 </head>
 <body>
@@ -46,15 +52,37 @@
         </nav>
     </header>
     <main>
-        <section id="s1" class="flex">
-            
+        <section id="s1">
+        <div>
             <h1>Upload de arquivos</h1>
-            <form action="codigos/upload.php" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?php echo($id)?>">
-                <input type="file" name="arquivos[]" multiple required>
-                <input type="submit">
-                <?php echo ($msg)?>
-            </form>
+                <div>
+                    <form action="codigos/upload.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?php echo($id)?>">
+                        <input type="file" name="arquivos[]" multiple required>
+                        <input type="submit">
+                        <?php echo ($msg)?>
+                    </form>
+                </div>
+                <div class="lista">
+                <?php
+                    $res = pesquisarFoto($conexao, 0, $id);
+            
+                    while ($registro = mysqli_fetch_assoc($res)) {
+                        $idFoto = $registro["idFoto"];
+                        $arquivo = $registro["arquivo"];
+                        $diretorio = "fotos/$arquivo";
+                        echo "
+                        <div>
+                            <div class = 'item'>
+                                <img src='$diretorio' alt=''>
+                            </div>
+                            <a href='perfilFotografoEnviarFotos.php?idEnsaio=1&remov=$idFoto'>Remover</a>
+                        </div>
+                        ";
+                    }
+                ?>
+            </div>
+        </div>
         </section>
     </main>
 </body>

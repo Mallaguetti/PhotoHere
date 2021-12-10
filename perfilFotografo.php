@@ -57,10 +57,16 @@
                     if ($msg == "editarFoto"){
                         echo ("
                             <form method='post' name='formFotoPerfil' action='codigos/editarFotoPerfil.php' enctype='multipart/form-data'>
-                                <input type='hidden' name='id' value='$id'>
-                                <input type='file' name='fotoPerfil'>
-                                <input type='submit' name='btnEnviar' value='Salvar Foto'>
-                                <a href='perfilFotografo.php'>Cancelar</a>
+                                <div>
+                                    <div>
+                                    <input type='hidden' name='id' value='$id'>
+                                    <input type='file' name='fotoPerfil'>
+                                    </div>
+                                    <div>
+                                    <input type='submit' name='btnEnviar' value='Salvar Foto'>
+                                    <a href='perfilFotografo.php'>Cancelar</a>
+                                    </div>
+                                </div>
                             </form>
                         ");
                     };
@@ -71,13 +77,40 @@
                 </div>
                 <div>
                     <h2>Meus dados</h2>
-                    <p>nuemro: <?php echo $celular?></p>
-                    <p>email: <?php echo $email?></p>
-                    <p>facebook: <?php echo $facebook?></p>
-                    <p>insta: <?php echo $instagram?></p>
+                    <?php
+                    $definido=false;
+                        if(isset($celular)){
+                            if ($celular != ""){
+                                echo("<p>Nuemro: $celular</p>");
+                                $definido=true;
+                            }
+                        };
+                        if(isset($email)){
+                            if ($email != ""){
+                                echo("<p>Email: $email</p>");
+                                $definido=true;
+                            }
+                        };
+                        if(isset($facebook)){
+                            if ($facebook != ""){
+                                echo("<p>Facebook: $facebook</p>");
+                                $definido=true;
+                            }
+                        };
+                        if(isset($instagram)){
+                            if ($instagram != ""){
+                                echo("<p>Instagram: $instagram</p>");
+                                $definido=true;
+                            }
+                        };
+                        if(!$definido){
+                            echo("<p>Você ainda não adicionou seus dados!</p>");
+                        }
+                    ?>
+                    <a href="perfilFotografoEditar.php">Editar</a>
                 </div>
             </div>
-            <div>
+            <div id="conteudo">
                 <h2>Ensaios marcados</h2>
                 <div class="pesquisa">         
                     <?php
@@ -111,7 +144,7 @@
                                     break;
                             }
                             echo "
-                            <form class='flex centro resultado' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
+                            <form class='flex centro resultado ensaio' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
                                 <table>
                                     <thead>
                                         <tr>
