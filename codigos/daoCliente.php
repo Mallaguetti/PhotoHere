@@ -32,4 +32,15 @@
         $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         return $res;
     };
+    function editarCliente($conexao, $id, $nome, $sobreNome, $email, $celular){
+        
+        $sql = "UPDATE cliente SET 
+        nome = '$nome',
+        sobreNome = '$sobreNome',
+        email = '$email',
+        celular = '$celular'
+        WHERE idCliente = $id";
+
+        mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+    };
 ?>

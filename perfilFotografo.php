@@ -114,7 +114,6 @@
                 <h2>Ensaios marcados</h2>
                 <div class="pesquisa">         
                     <?php
-                        require_once 'codigos/conectar.php';
                         require_once 'codigos/daoEnsaio.php';
                         require_once 'codigos/daoCliente.php';
 
