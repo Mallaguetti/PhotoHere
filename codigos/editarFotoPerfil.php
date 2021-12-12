@@ -20,7 +20,7 @@
             $msg = 'Formato do arquivo incompatível';
 
         } else {//Validação no tamanho
-            if ($arquivo['size'] > 100000) {
+            if ($arquivo['size'] > 1000000) {
                 $msg = 'Arquivo de imagem muito grande';
 
             } else {//Arquivo validado
