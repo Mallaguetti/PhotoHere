@@ -57,6 +57,38 @@
                 ?>
             </div>
             <br>
+            <?php
+            require_once 'codigos/daoEnsaio.php';
+            $registro = mysqli_fetch_assoc(pesquisarEnsaio($conexao, "idEnsaio", $idEnsaio));
+            $nota = $registro["avaliacao"];
+            
+            if ($nota == null) {
+                echo("
+                <form method='post' action='codigos/avaliarEnsaio.php' >
+                    <table>   
+                        <thead>
+                            <th colspan='6'>Avalie o serviço</th>
+                        </thead> ");
+                        for ($i = 5; $i >= 1; $i--){
+                            echo ("<tr>");
+                            echo ("<td><input name='nota' type='radio' required='' value = '$i'></td>");
+                            for ($f = $i; $f >= 1; $f--){
+                                echo ("<td><img src='imagens/estrela.png'></td>");
+                            }
+                            echo (" <td colspan = '5'>($i estrelas)</td></tr>");
+                        }
+                echo("</table>
+                    <input type='hidden' name='idEnsaio' value='$idEnsaio'>
+                    <input type='submit' name='btnEnviar' value='enviar avaliação'>
+                </form>");
+            } else {
+                echo ("A nota dada foi: </br> <table><tr>");
+                for ($f = $nota; $f >= 1; $f--){
+                    echo ("<td><img src='imagens/estrela.png'></td>");
+                }
+                echo("<td> ($nota Estrelas)</td></tr><table></br>");
+            }
+            ?>            
             <a href="perfilCliente.php">Voltar</a>
         </div>
         </section>

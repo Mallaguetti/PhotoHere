@@ -15,6 +15,12 @@
         WHERE idEnsaio = $id";
         mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
     };
+    function avaliarEnsaio($conexao, $id, $nota) {
+        $sql = "UPDATE ensaio SET 
+        avaliacao = '$nota'
+        WHERE idEnsaio = $id";
+        mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+    };
     function excluirEnsaio($conexao, $id){
         $sql = "DELETE FROM ensaio WHERE idEnsaio = $id";
         mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
