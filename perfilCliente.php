@@ -129,12 +129,23 @@
                                     break;
                                 case 2:
                                     $status = "fotos recebidas";
-                                    $acao = "<td rowspan='2'><a href='perfilClienteVerFotos.php?idEnsaio=$idEnsaio'>Ver fotos</a></td>";
+                                    $nota = $registro["avaliacao"];
+                                    $acao = "<td rowspan='3'><a href='perfilClienteVerFotos.php?idEnsaio=$idEnsaio'>Ver fotos</a></td></tr></tables></br>";
+                                    
+                                    $estrelas = null;
+                                    for ($f = $nota; $f >= 1; $f--){
+                                        $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
+                                    }
+                                    $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
+
                                     break;
+                            }
+                            if (!isset($nota)) {
+                                $nota;
                             }
                             echo "
                             <form class='flex centro resultado ensaio' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
-                                <table>
+                                <table class='tbEnsaio'>
                                     <thead>
                                         <tr>
                                             <th>Ensaio com $nomeFotografo</th>
@@ -149,17 +160,15 @@
                                             <td>Hora: $hora</td>
                                         </tr>
                                     </tbody>
-                                    <tfoot>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             $acao
                                         </tr>
-                                    </tfoot>
                                 </table>
                                 <input type='hidden' name='idFotografo' value=''>
-                                
-                                </form>
+                                $nota
+                            </form>
                             ";
                         }
                         if ($isNull){
@@ -167,7 +176,7 @@
                             echo ("<a href='encontrarFotografo.php'>Encontre um fotografo</a> e marque um agora mesmo");
                             $resIsNull = true;
                         }else{
-                            echo ("</br><a href='encontrarFotografo.php'><p>Procurar mais fotografos</p></a>");  
+                            echo ("<a href='encontrarFotografo.php'><p>Procurar mais fotografos</p></a>");  
                         };
                     ?>
                 </div>

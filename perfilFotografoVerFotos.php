@@ -5,13 +5,13 @@
     require_once 'codigos/daoFoto.php';
 
     loginRequerido();
-    if ($isFotografo){
-        header("Location:perfilFotografo.php");
+    if (!$isFotografo){
+        header("Location:perfilCliente.php");
     };
     if (isset($_GET["idEnsaio"])){
         $idEnsaio = $_GET["idEnsaio"];
     } else {
-        header("Location:perfilCliente.php");
+        header("Location:perfilFotografo.php");
     }
 
 ?>
@@ -35,7 +35,7 @@
     <main>
         <section id="s1">
         <div>
-            <h1>Suas fotos</h1>
+            <h1>Fotos enviadas</h1>
                 <div class="lista">
                 <?php
                     $res = pesquisarFoto($conexao, 0, $idEnsaio);

@@ -153,17 +153,25 @@
                                     $acao = "<td rowspan='2'><a href='perfilFotografoEnviarFotos.php?idEnsaio=$idEnsaio'>Enviar Fotos</a></td>".$acao;
                                     break;
                                 case 2:
-                                    $nota = $registro["avaliacao"];
-                                    if($nota == null){
-                                        $avaliacao = "Ainda não avaliado";
-                                    };
                                     $status = "Ensaio Concluido";
-                                    $acao = "</tr><tr><td>&nbsp</td></tr><tr><td>Avaliação do cliente: $avaliacao</td></tr>";
+                                    $nota = $registro["avaliacao"];
+                                    $acao = "<td rowspan='2'><a href='perfilFotografoVerFotos.php?idEnsaio=$idEnsaio'>Ver Fotos</a></td>";
+
+                                    $estrelas = null;
+                                    for ($f = $nota; $f >= 1; $f--){
+                                        $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
+                                    }
+                                    $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
+                                    
+                                    
                                     break;
+                            }
+                            if (!isset($nota)) {
+                                $nota;
                             }
                             echo "
                             <form class='flex centro resultado ensaio' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
-                                <table>
+                                <table class='tbEnsaio'>
                                     <thead>
                                         <tr>
                                             <th>Ensaio com $nomeCliente</th>
@@ -187,7 +195,7 @@
                                     </tfoot>
                                 </table>
                                 <input type='hidden' name='idFotografo' value=''>
-                                
+                                $nota;
                                 </form>
                             ";
                         }

@@ -13,6 +13,9 @@
     margin-top:.6rem;
     border-radius:.3rem;
 }
+.tbEnsaio{
+    width: 100%;
+}
 #s1{
     align-items: flex-start;
     justify-content: center;
