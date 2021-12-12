@@ -44,6 +44,7 @@
     <main>
         <section id="s1">
             <div id="dados">
+            <h2>Meu perfil</h2>
                 <div class="flex cabecalho">
                     <?php
                     if ($foto != null) {

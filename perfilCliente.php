@@ -42,6 +42,7 @@
     <main>
         <section id="s1">
             <div id="dados">
+                <h2>Meu perfil</h2>
                 <div class="flex cabecalho">
                     <?php
                     if ($foto != null) {
@@ -127,7 +128,8 @@
                                     $acao = "";
                                     break;
                                 case 2:
-                                    $status;
+                                    $status = "fotos recebidas";
+                                    $acao = "<td rowspan='2'><a href='perfilClienteVerFotos.php?idEnsaio=$idEnsaio'>Ver fotos</a></td>";
                                     break;
                             }
                             echo "
