@@ -1,7 +1,7 @@
 <?php
     require_once "conectar.php";
     require_once "daoFotografo.php";
-    require_once "daoUsuario.php";
+    require_once "daoCliente.php";
 
     $msg = null;
     $id = $_POST["id"];

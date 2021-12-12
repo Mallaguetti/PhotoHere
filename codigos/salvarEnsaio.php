@@ -1,4 +1,6 @@
 <?php
+    $editar = $_POST["editar"];
+    $idEnsaio = $_POST["ensaio"];
     $idCliente = $_POST["cliente"];
     $idFotografo = $_POST["fotografo"];
     $data = $_POST["data"];
@@ -7,6 +9,11 @@
     require_once "conectar.php";
     require_once "daoEnsaio.php";
 
-    inserirEnsaio($conexao, $idCliente, $idFotografo, $data, $hora);
-    header("Location:../perfilCliente.php?msg=Cadastrado com sucesso");
+    if ($editar){
+        editarEnsaio($conexao, $idEnsaio, $data, $hora);
+        header("Location:../perfilCliente.php?msg=Cadastrado com sucesso");
+    } else {
+        inserirEnsaio($conexao, $idCliente, $idFotografo, $data, $hora);
+        header("Location:../perfilCliente.php?msg=Cadastrado com sucesso");
+    };
 ?>

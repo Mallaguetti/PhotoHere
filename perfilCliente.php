@@ -29,6 +29,7 @@
     <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/perfil.css">
+    <link rel="stylesheet" type="text/css" href="estilos/formulario.css">
     <link rel="stylesheet" type="text/css" href="estilos/individuais/perfilCliente.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="estilos/individuais/perfilClienteP.css">
 </head>
@@ -100,20 +101,26 @@
                     <?php
                         require_once 'codigos/daoEnsaio.php';
                         require_once 'codigos/daoFotografo.php';
-
+                        $isNull = true;
                         $res = pesquisarEnsaio($conexao, "cliente", $_SESSION["idSessao"]);
+                        
+                        $resIsNull = false;
                         while ($registro = mysqli_fetch_assoc($res)) {
+                            $isNull = false;
+                            $idEnsaio = $registro["idEnsaio"];
                             $data = $registro["data"];
                             $hora = $registro["hora"];
                             $etapa = $registro["etapa"];
-                            $fotografo = $registro["fotografo"];
+                            $idFotografo = $registro["fotografo"];
                             
-                            $resFotografo = mysqli_fetch_assoc(pesquisarFotografo($conexao,0,$fotografo));
+                            $resFotografo = mysqli_fetch_assoc(pesquisarFotografo($conexao,0,$idFotografo));
                             $nomeFotografo = $resFotografo["nome"];
 
                             switch ($etapa){
                                 case 0:
                                     $status = "Aguardando confirmação";
+                                    $acao = "<td rowspan='2'><a href='codigos/editarEnsaio.php?msg=0&id=$idEnsaio'>Cancelar</a></td>
+                                    <td rowspan='2'><a href='editarEnsaio.php?id=$idFotografo&editar=true&ensaio=$idEnsaio'>Editar</a></td>";
                                     break;
                                 case 1:
                                     $status = "Aguardando confirmação";
@@ -133,20 +140,17 @@
                                     <tbody>
                                         <tr>
                                             <td>Data: $data</td>
-                                            <td rowspan='3'>Status: $status</td>
+                                            <td rowspan='3'> &nbsp &nbsp Status: $status</td>
                                         </tr>
                                         <tr>
                                             <td>Hora: $hora</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Local: </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td rowspan='2'><a href=''>Editar</a></td>
+                                            $acao
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -155,6 +159,13 @@
                                 </form>
                             ";
                         }
+                        if ($isNull){
+                            echo ("<p>Você ainda não tem ensaios!</p>");
+                            echo ("<a href='encontrarFotografo.php'>Encontre um fotografo</a> e marque um agora mesmo");
+                            $resIsNull = true;
+                        }else{
+                            echo ("</br><a href='encontrarFotografo.php'><p>Procurar mais fotografos</p></a>");  
+                        };
                     ?>
                 </div>
             </div>

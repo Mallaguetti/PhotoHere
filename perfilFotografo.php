@@ -116,16 +116,17 @@
                     <?php
                         require_once 'codigos/daoEnsaio.php';
                         require_once 'codigos/daoCliente.php';
-
+                        $isNull = true;
                         $res = pesquisarEnsaio($conexao, "fotografo", $_SESSION["idSessao"]);
                         while ($registro = mysqli_fetch_assoc($res)) {
+                            $isNull = false;
                             $idEnsaio = $registro["idEnsaio"];
                             $data = $registro["data"];
                             $hora = $registro["hora"];
                             $etapa = $registro["etapa"];
-                            $cliente = $registro["cliente"];
-                            
-                            $resCliente = mysqli_fetch_assoc(pesquisarCliente($conexao,0,$cliente));
+                            $idCliente = $registro["cliente"];
+
+                            $resCliente = mysqli_fetch_assoc(pesquisarCliente($conexao,0,$idCliente));
                             $nomeCliente = $resCliente["nome"];
 
                             switch ($etapa){
@@ -153,13 +154,10 @@
                                     <tbody>
                                         <tr>
                                             <td>Data: $data</td>
-                                            <td rowspan='3'>Status: $status</td>
+                                            <td rowspan='3'> &nbsp &nbsp Status: $status</td>
                                         </tr>
                                         <tr>
                                             <td>Hora: $hora</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Local: </td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
@@ -175,6 +173,9 @@
                                 </form>
                             ";
                         }
+                        if  ($isNull){
+                            echo ("</br><p>Você não tem ensaios marcados!</p>");
+                        };
                     ?>
                 </div>
             </div>

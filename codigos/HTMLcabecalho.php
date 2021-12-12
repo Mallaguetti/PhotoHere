@@ -17,8 +17,6 @@ if($sessaoExiste){
         } else {
             echo ("<a id='perfil' href='perfilFotografo.php'><img src='imagens/perfil.jpg'></a>");
         }
-    } else {
-        echo "<a class='bt cab' href='encontrarFotografo.php'>Procurar Fotografo</a>";
     }
     echo "<a class='bt cab' href='codigos/logout.php'>Sair</a>";
 }else{

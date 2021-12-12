@@ -7,6 +7,18 @@
     } else {
         header("Location:encontrarFotografo.php");
     }
+    if (isset($_GET["editar"])){
+        $editar = $_GET["editar"];
+        if (isset($_GET["ensaio"])){
+            $ensaio = $_GET["ensaio"];
+            $local = "perfilCliente.php";
+        } else {
+            $ensaio = null;
+            $local = "encontrarFotografo.php";
+        };
+    } else {
+        header("Location:encontrarFotografo.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,9 +62,11 @@
             </div>
             <input type="hidden" name="cliente" value="<?php echo $idCliente?>">
             <input type="hidden" name="fotografo" value="<?php echo $idFotografo?>">
+            <input type="hidden" name="editar" value="<?php echo $editar?>">
+            <input type="hidden" name="ensaio" value="<?php echo $ensaio?>">
             <div>
-                <input type="submit" name="btnEnviar" value="Solicitar Horario">
-                <a href="encontrarFotografo.php">Cancelar</a>
+                <input type="submit" name="btnEnviar" value="Confirmar">
+                <a href="<?php echo $local ?>">Cancelar</a>
             </div>           
         </form>
     </section>

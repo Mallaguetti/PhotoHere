@@ -43,7 +43,7 @@
             require_once "codigos/validarSessao.php";
             if ($sessaoExiste) {
                 if(!$isFotografo){
-                    echo "<a href='novoEnsaio.php?id=$id'>Marcar Ensaio</a>";
+                    echo "<a href='editarEnsaio.php?id=$id&editar=false'>Marcar Ensaio</a>";
                 } else {
                     echo "Apenas clientes podem marcar ensaio";
                 };

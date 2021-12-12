@@ -8,7 +8,8 @@ if(isset($_GET['msg'])){
 
     switch($msg){
         case 0: //Excluir
-
+            excluirEnsaio($conexao, $idEnsaio);
+            header("Location:../perfilCliente.php");
             break;
 
         case 1: //Avançar etapa
