@@ -157,17 +157,19 @@
                                     $nota = $registro["avaliacao"];
                                     $acao = "<td rowspan='2'><a href='perfilFotografoVerFotos.php?idEnsaio=$idEnsaio'>Ver Fotos</a></td>";
 
-                                    $estrelas = null;
-                                    for ($f = $nota; $f >= 1; $f--){
-                                        $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
-                                    }
-                                    $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
-                                    
-                                    
+                                    if (isset($nota)){
+                                        $estrelas = null;
+                                        for ($f = $nota; $f >= 1; $f--){
+                                            $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
+                                        }
+                                        $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
+                                    } else {
+                                        $nota = ("Aguardando avaliação");
+                                    } 
                                     break;
                             }
                             if (!isset($nota)) {
-                                $nota;
+                                $nota = null;
                             }
                             echo "
                             <form class='flex centro resultado ensaio' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
@@ -195,7 +197,7 @@
                                     </tfoot>
                                 </table>
                                 <input type='hidden' name='idFotografo' value=''>
-                                $nota;
+                                $nota
                                 </form>
                             ";
                         }

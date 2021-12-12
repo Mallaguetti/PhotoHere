@@ -132,16 +132,19 @@
                                     $nota = $registro["avaliacao"];
                                     $acao = "<td rowspan='3'><a href='perfilClienteVerFotos.php?idEnsaio=$idEnsaio'>Ver fotos</a></td></tr></tables></br>";
                                     
-                                    $estrelas = null;
-                                    for ($f = $nota; $f >= 1; $f--){
-                                        $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
-                                    }
-                                    $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
-
+                                    if (isset($nota)){
+                                        $estrelas = null;
+                                        for ($f = $nota; $f >= 1; $f--){
+                                            $estrelas = $estrelas.("<img src='imagens/estrela.png'>");
+                                        }
+                                        $nota = ("<table><tr><td>Avaliação:</td><td>".$estrelas."</td><td>($nota Estrelas)</td></tr></table>");
+                                    } else {
+                                        $nota = ("Ainda não avaliado");
+                                    } 
                                     break;
                             }
                             if (!isset($nota)) {
-                                $nota;
+                                $nota = null;
                             }
                             echo "
                             <form class='flex centro resultado ensaio' method='post' name='formLogin' action='encontrarFotografo.php' enctype='multipart/form-dat'>
