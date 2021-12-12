@@ -123,7 +123,8 @@
                                     <td rowspan='2'><a href='editarEnsaio.php?id=$idFotografo&editar=true&ensaio=$idEnsaio'>Editar</a></td>";
                                     break;
                                 case 1:
-                                    $status = "Aguardando confirmação";
+                                    $status = "Aguardando envio de Fotos";
+                                    $acao = "";
                                     break;
                                 case 2:
                                     $status;

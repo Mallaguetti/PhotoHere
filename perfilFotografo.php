@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div id="conteudo">
-                <h2>Ensaios marcados</h2>
+                <h2>Ensaios</h2>
                 <div class="pesquisa">         
                     <?php
                         require_once 'codigos/daoEnsaio.php';
@@ -136,11 +136,28 @@
                                     <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>Confirmar</a></td>";
                                     break;
                                 case 1:
-                                    $status = "Aguardando fotos";
-                                    $acao = "<td rowspan='2'><a href='perfilFotografoEnviarFotos.php?idEnsaio=$idEnsaio'>Enviar Fotos</a></td>
-                                    <td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>finalizar envio</a></td>";
+                                    require_once 'codigos/daoFoto.php';
+                                    $resultado = pesquisarFoto($conexao, 0, $idEnsaio);
+                                    $numFotos=0;
+                                    while ($registro = mysqli_fetch_assoc($resultado)) {
+                                        $numFotos += 1;
+                                    }
+                                    if ($numFotos == 0){
+                                        $status = "Aguardando fotos";
+                                        $acao = "";
+                                    } else {
+                                        $status = "$numFotos selecionadas";
+                                        $acao = "<td rowspan='2'><a href='codigos/editarEnsaio.php?msg=1&id=$idEnsaio'>Finalizar envio</a></td>";
+                                    }
+                                    $acao = "<td rowspan='2'><a href='perfilFotografoEnviarFotos.php?idEnsaio=$idEnsaio'>Enviar Fotos</a></td>".$acao;
                                     break;
                                 case 2:
+                                    $nota = $registro["avaliacao"];
+                                    if($nota == null){
+                                        $avaliacao = "Ainda não avaliado";
+                                    };
+                                    $status = "Ensaio Concluido";
+                                    $acao = "</tr><tr><td>&nbsp</td></tr><tr><td>Avaliação do cliente: $avaliacao</td></tr>";
                                     break;
                             }
                             echo "
@@ -174,7 +191,7 @@
                             ";
                         }
                         if  ($isNull){
-                            echo ("</br><p>Você não tem ensaios marcados!</p>");
+                            echo ("</br><p>Você não tem ensaios!</p>");
                         };
                     ?>
                 </div>

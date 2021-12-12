@@ -8,8 +8,7 @@
 
     require_once "conectar.php";
     require_once "daoEnsaio.php";
-
-    if ($editar){
+    if ($editar == "true"){
         editarEnsaio($conexao, $idEnsaio, $data, $hora);
         header("Location:../perfilCliente.php?msg=Cadastrado com sucesso");
     } else {

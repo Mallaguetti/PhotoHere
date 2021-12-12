@@ -13,7 +13,7 @@
         excluirFoto($conexao, $idFoto);
     }
     if (isset($_GET["idEnsaio"])){
-        $id = $_GET["idEnsaio"];
+        $idEnsaio = $_GET["idEnsaio"];
     } else {
         header("Location:perfilFotografo.php");
     }
@@ -57,7 +57,7 @@
             <h1>Upload de arquivos</h1>
                 <div>
                     <form action="codigos/upload.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="<?php echo($id)?>">
+                        <input type="hidden" name="idEnsaio" value="<?php echo($idEnsaio)?>">
                         <input type="file" name="arquivos[]" multiple required>
                         <input type="submit">
                         <?php echo ($msg)?>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="lista">
                 <?php
-                    $res = pesquisarFoto($conexao, 0, $id);
+                    $res = pesquisarFoto($conexao, 0, $idEnsaio);
             
                     while ($registro = mysqli_fetch_assoc($res)) {
                         $idFoto = $registro["idFoto"];
@@ -76,12 +76,14 @@
                             <div class = 'item'>
                                 <img src='$diretorio' alt=''>
                             </div>
-                            <a href='perfilFotografoEnviarFotos.php?idEnsaio=1&remov=$idFoto'>Remover</a>
+                            <a href='perfilFotografoEnviarFotos.php?idEnsaio=$idEnsaio&remov=$idFoto'>Remover</a>
                         </div>
                         ";
                     }
                 ?>
             </div>
+            <br>
+            <a href="perfilFotografo.php">Voltar</a>
         </div>
         </section>
     </main>

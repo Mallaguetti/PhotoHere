@@ -1,7 +1,7 @@
 <?php
     require_once "conectar.php";
     
-    $idEnsaio = $_POST["id"];
+    $idEnsaio = $_POST["idEnsaio"];
     $arquivos = $_FILES['arquivos'];
     $permitidos = ['jpg','jpeg','png'];
     $nomes = $arquivos['name'];

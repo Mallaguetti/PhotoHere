@@ -38,7 +38,6 @@ CREATE TABLE `ensaio` (
   `data` DATE NOT NULL,
   `hora` TIME NOT NULL,
   `etapa` int(11) NOT NULL,
-  `diretorio` VARCHAR(55),
   `avaliacao`int(11),
   `cliente` int(11),
   `fotografo` int(11),
