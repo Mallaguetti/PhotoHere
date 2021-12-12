@@ -48,7 +48,9 @@
                         <div>
                             <div class = 'item'>
                                 <img src='$diretorio' alt=''>
+
                             </div>
+                            <a href='$diretorio' download='$arquivo' type='image/jpg'>baixar</a>
                         </div>
                         ";
                     }
