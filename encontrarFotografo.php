@@ -62,12 +62,12 @@
                             $nota += $regis["avaliacao"];
                             $contador += 1;
                         };
-                        if ($contador != 0 ){
+                        if ($contador != 0 && $nota != 0){
                             $nota = $nota/$contador;
                         } else {
                             $nota = null;
                         };
-                        if (isset($nota)){
+                        if (isset($nota) && $nota != null && $nota != 0){
                             $estrelas = null;
                             for ($f = $nota; $f >= 1; $f--){
                                 $estrelas = $estrelas.("<img style='width:2vw; height: 2vw' src='imagens/estrela.png'>");

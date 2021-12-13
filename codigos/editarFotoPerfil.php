@@ -2,6 +2,7 @@
     require_once "conectar.php";
     require_once "daoFotografo.php";
     require_once "daoCliente.php";
+    require_once "validarSessao.php";
 
     $msg = null;
     $id = $_POST["id"];
@@ -27,8 +28,11 @@
                 $tamanho = $arquivo["size"];
                 $arq = fopen($arquivo["tmp_name"], "r");
                 $foto = addslashes(fread($arq,$tamanho));
-
-                altFotoFotografo($conexao, $id, $foto);
+                if($isFotografo){
+                    altFotoFotografo($conexao, $id, $foto);
+                } else {
+                    altFotoCliente($conexao, $id, $foto);
+                }
             }
         }
     }

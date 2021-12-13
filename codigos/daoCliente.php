@@ -32,6 +32,11 @@
         $res = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         return $res;
     };
+    function altFotoCliente($conexao, $id, $foto){
+        $sql = "UPDATE cliente SET fotoPerfil = '$foto' WHERE idCliente = $id";
+
+        mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+    };
     function editarCliente($conexao, $id, $nome, $sobreNome, $email, $celular){
         
         $sql = "UPDATE cliente SET 
