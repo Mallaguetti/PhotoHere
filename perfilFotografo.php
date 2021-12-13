@@ -200,6 +200,7 @@
                                 $nota
                                 </form>
                             ";
+                            $nota = null;
                         }
                         if  ($isNull){
                             echo ("</br><p>Você não tem ensaios!</p>");

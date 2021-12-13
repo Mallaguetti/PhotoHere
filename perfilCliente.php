@@ -173,6 +173,7 @@
                                 $nota
                             </form>
                             ";
+                            $nota = null;
                         }
                         if ($isNull){
                             echo ("<p>Você ainda não tem ensaios!</p>");
@@ -181,6 +182,7 @@
                         }else{
                             echo ("<a href='encontrarFotografo.php'><p>Procurar mais fotografos</p></a>");  
                         };
+                        
                     ?>
                 </div>
             </div>
