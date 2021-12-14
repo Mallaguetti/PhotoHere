@@ -25,7 +25,6 @@
                             <td>
                                 <select name="pesquisa">
                                     <option value="1">Nome</option>
-                                    <option value="2">CEP</option>
                                 </select>
                             </td>
                             <td><input type="text" name="texto" size="40"></td>
