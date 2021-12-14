@@ -113,7 +113,13 @@
                             $hora = $registro["hora"];
                             $etapa = $registro["etapa"];
                             $idFotografo = $registro["fotografo"];
+
+                            $data = explode("-", $data);
                             
+                            $ano = $data[0];
+                            $mes = $data[1];
+                            $dia = $data[2];
+
                             $resFotografo = mysqli_fetch_assoc(pesquisarFotografo($conexao,0,$idFotografo));
                             $nomeFotografo = $resFotografo["nome"];
 
@@ -156,7 +162,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Data: $data</td>
+                                            <td>Data: $dia / $mes / $ano</td>
                                             <td rowspan='3'> &nbsp &nbsp Status: $status</td>
                                         </tr>
                                         <tr>

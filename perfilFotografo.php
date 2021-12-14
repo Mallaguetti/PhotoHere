@@ -127,6 +127,12 @@
                             $etapa = $registro["etapa"];
                             $idCliente = $registro["cliente"];
 
+                            $data = explode("-", $data);
+                            
+                            $ano = $data[0];
+                            $mes = $data[1];
+                            $dia = $data[2];
+
                             $resCliente = mysqli_fetch_assoc(pesquisarCliente($conexao,0,$idCliente));
                             $nomeCliente = $resCliente["nome"];
 
@@ -181,7 +187,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Data: $data</td>
+                                            <td>Data: $dia / $mes / $ano</td>
                                             <td rowspan='3'> &nbsp &nbsp Status: $status</td>
                                         </tr>
                                         <tr>
