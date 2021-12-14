@@ -10,11 +10,11 @@
     <title>PhotoHere</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="imagens/LOGO.ico" type="image/x-icon">
-    <link type="text/js" href="estilos/rola.js">
+    <link type="text/js" href="estilos/rolar.js">
     <link rel="stylesheet" type="text/css" href="estilos/_principal.css">
     <link rel="stylesheet" type="text/css" href="estilos/individuais/index.css">
     <link rel="stylesheet" type="text/css" media="screen and (max-width:800px)" href="estilos/individuais/indexP.css">
-    <script src="estilos/rola.js"></script>
+    <script src="estilos/rolar.js"></script>
 </head>
 <body>
     <header id="nav" style="background-color: #00000000">
